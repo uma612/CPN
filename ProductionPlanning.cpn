@@ -1,0 +1,3537 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE workspaceElements PUBLIC "-//CPN//DTD CPNXML 1.0//EN" "http://cpntools.org/DTD/6/cpn.dtd">
+
+<workspaceElements>
+  <generator tool="CPN Tools"
+             version="3.4.0"
+             format="6"/>
+  <cpnet>
+    <globbox>
+      <block id="ID1412310166">
+        <id>Standard priorities</id>
+        <ml id="ID1412310255">val P_HIGH = 100;
+          <layout>val P_HIGH = 100;</layout>
+        </ml>
+        <ml id="ID1412310292">val P_NORMAL = 1000;
+          <layout>val P_NORMAL = 1000;</layout>
+        </ml>
+        <ml id="ID1412310322">val P_LOW = 10000;
+          <layout>val P_LOW = 10000;</layout>
+        </ml>
+      </block>
+      <block id="ID1">
+        <id>Standard declarations</id>
+        <color id="ID85042">
+          <id>UNIT</id>
+          <unit/>
+          <layout>colset UNIT = unit;</layout>
+        </color>
+        <color id="ID3">
+          <id>INT</id>
+          <int/>
+        </color>
+        <color id="ID4">
+          <id>BOOL</id>
+          <bool/>
+        </color>
+        <color id="ID5">
+          <id>STRING</id>
+          <string/>
+        </color>
+      </block>
+      <color id="ID1412312298">
+        <id>Engineers</id>
+        <enum>
+          <id>Engineer</id>
+        </enum>
+        <layout>colset Engineers = with Engineer;</layout>
+      </color>
+      <color id="ID1412324137">
+        <id>TaskName</id>
+        <alias>
+          <id>STRING</id>
+        </alias>
+        <layout>colset TaskName = STRING;</layout>
+      </color>
+      <color id="ID1412322724">
+        <id>Task</id>
+        <timed/>
+        <product>
+          <id>TaskName</id>
+          <id>INT</id>
+          <id>INT</id>
+        </product>
+        <layout>colset Task = product TaskName * INT * INT timed;</layout>
+      </color>
+      <var id="ID1412377447">
+        <type>
+          <id>Task</id>
+        </type>
+        <id>task</id>
+        <layout>var task : Task;</layout>
+      </var>
+      <color id="ID1412408973">
+        <id>Tasks</id>
+        <list>
+          <id>Task</id>
+        </list>
+        <layout>colset Tasks = list Task;</layout>
+      </color>
+      <var id="ID1412410527">
+        <type>
+          <id>Tasks</id>
+        </type>
+        <id>tasks</id>
+        <layout>var tasks : Tasks;</layout>
+      </var>
+      <color id="ID1412323279">
+        <id>TxT</id>
+        <product>
+          <id>TaskName</id>
+          <id>TaskName</id>
+        </product>
+        <layout>colset TxT = product TaskName * TaskName;</layout>
+      </color>
+      <color id="ID1412322179">
+        <id>Constraint</id>
+        <union>
+          <unionfield>
+            <id>BEFORE</id>
+            <type>
+              <id>TxT</id>
+            </type>
+          </unionfield>
+        </union>
+        <layout>colset Constraint = union BEFORE : TxT;</layout>
+      </color>
+      <color id="ID1412327465">
+        <id>Constraints</id>
+        <list>
+          <id>Constraint</id>
+        </list>
+        <layout>colset Constraints = list Constraint;</layout>
+      </color>
+      <var id="ID1412328447">
+        <type>
+          <id>Constraints</id>
+        </type>
+        <id>constraints</id>
+        <layout>var constraints : Constraints;</layout>
+      </var>
+      <ml id="ID1412332580">fun DetermineTasks () = [(&quot;A&quot;,5,3),(&quot;B&quot;,7,2),(&quot;C&quot;,10,1)];
+        <layout>fun DetermineTasks () = [(&quot;A&quot;,5,3),(&quot;B&quot;,7,2),(&quot;C&quot;,10,1)];</layout>
+      </ml>
+      <ml id="ID1412334068">fun DetermineConstraints () = [BEFORE (&quot;A&quot;,&quot;B&quot;)];
+        <layout>fun DetermineConstraints () = [BEFORE (&quot;A&quot;,&quot;B&quot;)];</layout>
+      </ml>
+      <ml id="ID1412424935">fun SatConstraints _ = true;
+        <layout>fun SatConstraints _ = true;</layout>
+      </ml>
+    </globbox>
+    <page id="ID6">
+      <pageattr name="ProductionPlanning"/>
+      <place id="ID1412310612">
+        <posattr x="-59.000000"
+                 y="153.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Incoming
+Order</text>
+        <ellipse w="158.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412310613">
+          <posattr x="15.000000"
+                   y="129.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">UNIT</text>
+        </type>
+        <initmark id="ID1412310614">
+          <posattr x="5.000000"
+                   y="176.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">()</text>
+        </initmark>
+      </place>
+      <place id="ID1412310965">
+        <posattr x="-59.000000"
+                 y="-199.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Department1
+Tasks</text>
+        <ellipse w="158.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412310966">
+          <posattr x="14.500000"
+                   y="-222.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">Task</text>
+        </type>
+        <initmark id="ID1412310967">
+          <posattr x="32.000000"
+                   y="-175.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </initmark>
+      </place>
+      <place id="ID1412311428">
+        <posattr x="-402.000000"
+                 y="-105.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Task
+Constraints</text>
+        <ellipse w="158.000000"
+                 h="40.000000"/>
+        <token x="-107.000000"
+               y="25.000000"/>
+        <marking x="-1.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="2"
+                anchor.horizontal="1"
+                anchor.vertical="2"/>
+        </marking>
+        <type id="ID1412311429">
+          <posattr x="-306.500000"
+                   y="-128.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">Constraints</text>
+        </type>
+        <initmark id="ID1412311430">
+          <posattr x="-311.000000"
+                   y="-81.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </initmark>
+      </place>
+      <place id="ID1412312729">
+        <posattr x="-396.000000"
+                 y="-290.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Engineer
+Resources</text>
+        <ellipse w="158.000000"
+                 h="40.000000"/>
+        <token x="-42.000000"
+               y="24.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412312730">
+          <posattr x="-305.500000"
+                   y="-313.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">Engineers</text>
+        </type>
+        <initmark id="ID1412312731">
+          <posattr x="-301.000000"
+                   y="-266.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">5`Engineer</text>
+        </initmark>
+      </place>
+      <place id="ID1412315086">
+        <posattr x="-59.000000"
+                 y="-417.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Completed
+Tasks</text>
+        <ellipse w="158.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412315087">
+          <posattr x="18.000000"
+                   y="-440.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">Tasks</text>
+        </type>
+        <initmark id="ID1412315088">
+          <posattr x="5.000000"
+                   y="-393.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">[]</text>
+        </initmark>
+      </place>
+      <place id="ID1412340848">
+        <posattr x="-59.000000"
+                 y="-25.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Order
+Received</text>
+        <ellipse w="158.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412340849">
+          <posattr x="15.000000"
+                   y="-48.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">UNIT</text>
+        </type>
+        <initmark id="ID1412340850">
+          <posattr x="32.000000"
+                   y="-1.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </initmark>
+      </place>
+      <trans id="ID1412310701"
+             explicit="false">
+        <posattr x="-59.000000"
+                 y="53.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Receive
+Order</text>
+        <box w="158.000000"
+             h="40.000000"/>
+        <binding x="7.200000"
+                 y="-3.000000"/>
+        <cond id="ID1412310702">
+          <posattr x="-147.000000"
+                   y="84.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </cond>
+        <time id="ID1412310703">
+          <posattr x="34.500000"
+                   y="84.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </time>
+        <code id="ID1412310704">
+          <posattr x="54.500000"
+                   y="1.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </code>
+        <channel id="ID1412310705">
+          <posattr x="53.500000"
+                   y="53.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </channel>
+        <priority id="ID1412310706">
+          <posattr x="-176.000000"
+                   y="22.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </priority>
+      </trans>
+      <trans id="ID1412338764"
+             explicit="false">
+        <posattr x="-59.000000"
+                 y="-105.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Determine
+Tasks and Constraints</text>
+        <box w="158.000000"
+             h="40.000000"/>
+        <binding x="7.200000"
+                 y="-3.000000"/>
+        <cond id="ID1412338765">
+          <posattr x="-147.000000"
+                   y="-74.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </cond>
+        <time id="ID1412338766">
+          <posattr x="34.500000"
+                   y="-74.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </time>
+        <code id="ID1412338767">
+          <posattr x="54.500000"
+                   y="-157.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </code>
+        <channel id="ID1412338768">
+          <posattr x="53.500000"
+                   y="-105.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </channel>
+        <priority id="ID1412338769">
+          <posattr x="-176.000000"
+                   y="-136.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </priority>
+      </trans>
+      <trans id="ID1412367610"
+             explicit="false">
+        <posattr x="-59.000000"
+                 y="-290.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Department1</text>
+        <box w="158.000000"
+             h="40.000000"/>
+        <subst subpage="ID1412367624"
+               portsock="(ID1412367632,ID1412311428)(ID1412367637,ID1412310965)(ID1412367642,ID1412312729)(ID1412367647,ID1412315086)">
+          <subpageinfo id="ID1412367668"
+                       name="Department">
+            <posattr x="-98.000000"
+                     y="-314.000000"/>
+            <fillattr colour="White"
+                      pattern="Solid"
+                      filled="false"/>
+            <lineattr colour="Black"
+                      thick="0"
+                      type="Solid"/>
+            <textattr colour="Black"
+                      bold="false"/>
+          </subpageinfo>
+        </subst>
+        <binding x="7.200000"
+                 y="-3.000000"/>
+        <cond id="ID1412367611">
+          <posattr x="-147.000000"
+                   y="-259.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </cond>
+        <time id="ID1412367612">
+          <posattr x="34.500000"
+                   y="-259.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </time>
+        <code id="ID1412367613">
+          <posattr x="54.500000"
+                   y="-342.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </code>
+        <channel id="ID1412367614">
+          <posattr x="53.500000"
+                   y="-290.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </channel>
+        <priority id="ID1412367615">
+          <posattr x="-176.000000"
+                   y="-321.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </priority>
+      </trans>
+      <arc id="ID1412310802"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412310701"/>
+        <placeend idref="ID1412310612"/>
+        <annot id="ID1412310803">
+          <posattr x="-50.000000"
+                   y="103.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">()</text>
+        </annot>
+      </arc>
+      <arc id="ID1412341715"
+           orientation="TtoP"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412310701"/>
+        <placeend idref="ID1412340848"/>
+        <annot id="ID1412341716">
+          <posattr x="-50.000000"
+                   y="16.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">()</text>
+        </annot>
+      </arc>
+      <arc id="ID1412344362"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412338764"/>
+        <placeend idref="ID1412340848"/>
+        <annot id="ID1412344363">
+          <posattr x="-50.000000"
+                   y="-65.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">()</text>
+        </annot>
+      </arc>
+      <arc id="ID1412345274"
+           orientation="TtoP"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412338764"/>
+        <placeend idref="ID1412310965"/>
+        <annot id="ID1412345275">
+          <posattr x="2.500000"
+                   y="-153.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">DetermineTasks ()</text>
+        </annot>
+      </arc>
+      <arc id="ID1412351925"
+           orientation="TtoP"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412338764"/>
+        <placeend idref="ID1412311428"/>
+        <annot id="ID1412351926">
+          <posattr x="-230.000000"
+                   y="-94.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">DetermineConstraints ()</text>
+        </annot>
+      </arc>
+      <arc id="ID1412367616"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412367610"/>
+        <placeend idref="ID1412311428"/>
+        <annot id="ID1412367617">
+          <posattr x="-242.000000"
+                   y="-214.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </annot>
+      </arc>
+      <arc id="ID1412367618"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412367610"/>
+        <placeend idref="ID1412310965"/>
+        <annot id="ID1412367619">
+          <posattr x="-80.000000"
+                   y="-245.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </annot>
+      </arc>
+      <arc id="ID1412367620"
+           orientation="BOTHDIR"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412367610"/>
+        <placeend idref="ID1412312729"/>
+        <annot id="ID1412367621">
+          <posattr x="-225.000000"
+                   y="-304.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </annot>
+      </arc>
+      <arc id="ID1412367622"
+           orientation="BOTHDIR"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412367610"/>
+        <placeend idref="ID1412315086"/>
+        <annot id="ID1412367623">
+          <posattr x="-38.000000"
+                   y="-354.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </annot>
+      </arc>
+      <Aux id="ID1412320393">
+        <posattr x="-472.000000"
+                 y="-39.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>Are Task constrains dependent on order - we have
+inter and intra department constraints?</text>
+      </Aux>
+      <Aux id="ID1412430789">
+        <posattr x="-39.000000"
+                 y="-331.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>More departments could be added here. Behaviorally, department may be symmetric
+and hence the Department module can be reused across all three departments</text>
+      </Aux>
+      <Aux id="ID1412483136">
+        <posattr x="-470.000000"
+                 y="97.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>Does the concept of parts need to be 
+represented in the model?</text>
+      </Aux>
+    </page>
+    <page id="ID1412367624">
+      <pageattr name="Department"/>
+      <place id="ID1412367632">
+        <posattr x="-444.000000"
+                 y="-10.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Task
+Constraints</text>
+        <ellipse w="188.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412367633">
+          <posattr x="-337.500000"
+                   y="-33.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">Constraints</text>
+        </type>
+        <initmark id="ID1412367634">
+          <posattr x="-342.000000"
+                   y="13.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </initmark>
+        <port id="ID1412367692"
+              type="In">
+          <posattr x="-513.000000"
+                   y="-26.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </port>
+      </place>
+      <place id="ID1412367637">
+        <posattr x="-59.000000"
+                 y="-14.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="3"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Department1
+Tasks</text>
+        <ellipse w="188.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412367638">
+          <posattr x="24.500000"
+                   y="-37.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">Task</text>
+        </type>
+        <initmark id="ID1412367639">
+          <posattr x="42.000000"
+                   y="9.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </initmark>
+        <port id="ID1412367695"
+              type="In">
+          <posattr x="-128.000000"
+                   y="-30.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </port>
+      </place>
+      <place id="ID1412367642">
+        <posattr x="-444.000000"
+                 y="-250.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Engineer
+Resources</text>
+        <ellipse w="188.000000"
+                 h="40.000000"/>
+        <token x="-124.000000"
+               y="23.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412367643">
+          <posattr x="-342.500000"
+                   y="-273.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">Engineers</text>
+        </type>
+        <initmark id="ID1412367644">
+          <posattr x="-338.000000"
+                   y="-226.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">5`Engineer</text>
+        </initmark>
+        <port id="ID1412367698"
+              type="I/O">
+          <posattr x="-513.000000"
+                   y="-266.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </port>
+      </place>
+      <place id="ID1412367647">
+        <posattr x="-59.000000"
+                 y="-454.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="3"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Completed
+Tasks</text>
+        <ellipse w="188.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412367648">
+          <posattr x="28.000000"
+                   y="-477.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">Tasks</text>
+        </type>
+        <initmark id="ID1412367649">
+          <posattr x="15.000000"
+                   y="-430.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">[]</text>
+        </initmark>
+        <port id="ID1412367702"
+              type="I/O">
+          <posattr x="-128.000000"
+                   y="-470.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </port>
+      </place>
+      <place id="ID1412381311">
+        <posattr x="-59.000000"
+                 y="-246.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="3"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Execute</text>
+        <ellipse w="188.000000"
+                 h="40.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
+        <marking x="0.000000"
+                 y="0.000000"
+                 hidden="false">
+          <snap snap_id="0"
+                anchor.horizontal="0"
+                anchor.vertical="0"/>
+        </marking>
+        <type id="ID1412381312">
+          <posattr x="24.500000"
+                   y="-269.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">Task</text>
+        </type>
+        <initmark id="ID1412381313">
+          <posattr x="42.000000"
+                   y="-222.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </initmark>
+      </place>
+      <trans id="ID1412372471"
+             explicit="false">
+        <posattr x="-59.000000"
+                 y="-126.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="3"
+                  type="solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Resources
+Constraints</text>
+        <box w="188.000000"
+             h="40.000000"/>
+        <binding x="7.200000"
+                 y="-3.000000"/>
+        <cond id="ID1412372472">
+          <posattr x="118.000000"
+                   y="-157.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">[SatConstraints (constraints,tasks)]</text>
+        </cond>
+        <time id="ID1412372473">
+          <posattr x="49.500000"
+                   y="-95.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </time>
+        <code id="ID1412372474">
+          <posattr x="69.500000"
+                   y="-178.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </code>
+        <channel id="ID1412372475">
+          <posattr x="68.500000"
+                   y="-126.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </channel>
+        <priority id="ID1412372476">
+          <posattr x="-191.000000"
+                   y="-157.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </priority>
+      </trans>
+      <trans id="ID1412399214"
+             explicit="false">
+        <posattr x="-59.000000"
+                 y="-350.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="3"
+                  type="solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <text>Completed</text>
+        <box w="188.000000"
+             h="40.000000"/>
+        <binding x="7.200000"
+                 y="-3.000000"/>
+        <cond id="ID1412399215">
+          <posattr x="-162.000000"
+                   y="-319.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </cond>
+        <time id="ID1412399216">
+          <posattr x="49.500000"
+                   y="-319.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </time>
+        <code id="ID1412399217">
+          <posattr x="69.500000"
+                   y="-402.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </code>
+        <channel id="ID1412399218">
+          <posattr x="68.500000"
+                   y="-350.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </channel>
+        <priority id="ID1412399219">
+          <posattr x="-191.000000"
+                   y="-381.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0"/>
+        </priority>
+      </trans>
+      <arc id="ID1412374934"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="3"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412372471"/>
+        <placeend idref="ID1412367637"/>
+        <annot id="ID1412374935">
+          <posattr x="-41.500000"
+                   y="-70.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">task</text>
+        </annot>
+      </arc>
+      <arc id="ID1412379366"
+           orientation="BOTHDIR"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412372471"/>
+        <placeend idref="ID1412367632"/>
+        <bendpoint id="ID1412394911"
+                   serial="1">
+          <posattr x="-444.000000"
+                   y="-106.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
+        <annot id="ID1412379367">
+          <posattr x="-297.000000"
+                   y="-101.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">constraints</text>
+        </annot>
+      </arc>
+      <arc id="ID1412381967"
+           orientation="TtoP"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="3"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412372471"/>
+        <placeend idref="ID1412381311"/>
+        <annot id="ID1412381968">
+          <posattr x="-1.500000"
+                   y="-186.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">task@+(#2 task)</text>
+        </annot>
+      </arc>
+      <arc id="ID1412390018"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412372471"/>
+        <placeend idref="ID1412367642"/>
+        <bendpoint id="ID1412395622"
+                   serial="1">
+          <posattr x="-444.000000"
+                   y="-151.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
+        <annot id="ID1412390019">
+          <posattr x="-292.500000"
+                   y="-157.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">(#3 task)`Engineer</text>
+        </annot>
+      </arc>
+      <arc id="ID1412403639"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="3"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412399214"/>
+        <placeend idref="ID1412381311"/>
+        <annot id="ID1412403640">
+          <posattr x="-41.500000"
+                   y="-298.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">task</text>
+        </annot>
+      </arc>
+      <arc id="ID1412405145"
+           orientation="TtoP"
+           order="2">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="3"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412399214"/>
+        <placeend idref="ID1412367647"/>
+        <annot id="ID1412405146">
+          <posattr x="-19.500000"
+                   y="-402.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">task::tasks</text>
+        </annot>
+      </arc>
+      <arc id="ID1412406672"
+           orientation="BOTHDIR"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412372471"/>
+        <placeend idref="ID1412367647"/>
+        <bendpoint id="ID1412406675"
+                   serial="1">
+          <posattr x="274.000000"
+                   y="-126.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
+        <bendpoint id="ID1412406674"
+                   serial="2">
+          <posattr x="274.000000"
+                   y="-454.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
+        <annot id="ID1412406673">
+          <posattr x="155.000000"
+                   y="-115.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">tasks</text>
+        </annot>
+      </arc>
+      <arc id="ID1412412876"
+           orientation="PtoT"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="3"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412399214"/>
+        <placeend idref="ID1412367647"/>
+        <bendpoint id="ID1412418414"
+                   serial="1">
+          <posattr x="-207.000000"
+                   y="-365.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
+        <bendpoint id="ID1412412878"
+                   serial="2">
+          <posattr x="-207.000000"
+                   y="-454.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
+        <annot id="ID1412412877">
+          <posattr x="-228.000000"
+                   y="-403.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">tasks</text>
+        </annot>
+      </arc>
+      <arc id="ID1412444765"
+           orientation="TtoP"
+           order="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <arrowattr headsize="1.200000"
+                   currentcyckle="2"/>
+        <transend idref="ID1412399214"/>
+        <placeend idref="ID1412367642"/>
+        <bendpoint id="ID1412444767"
+                   serial="1">
+          <posattr x="-444.000000"
+                   y="-321.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
+        <annot id="ID1412444766">
+          <posattr x="-318.500000"
+                   y="-315.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+          <text tool="CPN Tools"
+                version="3.4.0">(#3 task)`Engineer</text>
+        </annot>
+      </arc>
+      <vguideline id="ID1412455740"
+                  x="-444.000000">
+        <guideline_elm idref="ID1412367632"/>
+        <guideline_elm idref="ID1412367642"/>
+      </vguideline>
+    </page>
+    <page id="ID1412493538">
+      <pageattr name="StateSpace"/>
+      <ssarc id="ID1412496711"
+             order="1"
+             number="1">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412495649"/>
+        <destination idref="ID1412496707"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>1:1-&gt;2 @ 0 ProductionPlanning&apos;Receive_Order 1: {}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412497778"
+             order="1"
+             number="2">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412496707"/>
+        <destination idref="ID1412497774"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>2:2-&gt;3 @ 0 ProductionPlanning&apos;Determine_Tasks_and_Constraints 1: {}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412498860"
+             order="1"
+             number="5">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412497774"/>
+        <destination idref="ID1412498848"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>5:3-&gt;6 @ 0 Department&apos;Resources_Constraints 1: {task=(&quot;A&quot;,5,3),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412498865"
+             order="1"
+             number="4">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412497774"/>
+        <destination idref="ID1412498852"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>4:3-&gt;5 @ 0 Department&apos;Resources_Constraints 1: {task=(&quot;B&quot;,7,2),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412498870"
+             order="1"
+             number="3">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412497774"/>
+        <destination idref="ID1412498856"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>3:3-&gt;4 @ 0 Department&apos;Resources_Constraints 1: {task=(&quot;C&quot;,10,1),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412499949"
+             order="1"
+             number="7">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412498856"/>
+        <destination idref="ID1412499941"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>7:4-&gt;8 @ 0 Department&apos;Resources_Constraints 1: {task=(&quot;A&quot;,5,3),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412499954"
+             order="1"
+             number="6">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412498856"/>
+        <destination idref="ID1412499945"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>6:4-&gt;7 @ 0 Department&apos;Resources_Constraints 1: {task=(&quot;B&quot;,7,2),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412501032"
+             order="1"
+             number="9">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412498852"/>
+        <destination idref="ID1412499945"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>9:5-&gt;7 @ 0 Department&apos;Resources_Constraints 1: {task=(&quot;C&quot;,10,1),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412501037"
+             order="1"
+             number="8">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412498852"/>
+        <destination idref="ID1412501028"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>8:5-&gt;9 @ 0 Department&apos;Resources_Constraints 1: {task=(&quot;A&quot;,5,3),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412502114"
+             order="1"
+             number="11">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412498848"/>
+        <destination idref="ID1412499941"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>11:6-&gt;8 @ 0 Department&apos;Resources_Constraints 1: {task=(&quot;C&quot;,10,1),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412502119"
+             order="1"
+             number="10">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412498848"/>
+        <destination idref="ID1412501028"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>10:6-&gt;9 @ 0 Department&apos;Resources_Constraints 1: {task=(&quot;B&quot;,7,2),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412503201"
+             order="1"
+             number="14">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412501028"/>
+        <destination idref="ID1412503197"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>14:9-&gt;12 @ 5 Department&apos;Completed 1: {tasks=[],task=(&quot;A&quot;,5,3)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412504286"
+             order="1"
+             number="12">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412499945"/>
+        <destination idref="ID1412504282"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>12:7-&gt;10 @ 7 Department&apos;Completed 1: {tasks=[],task=(&quot;B&quot;,7,2)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412505374"
+             order="1"
+             number="13">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412499941"/>
+        <destination idref="ID1412505370"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>13:8-&gt;11 @ 5 Department&apos;Completed 1: {tasks=[],task=(&quot;A&quot;,5,3)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412506465"
+             order="1"
+             number="19">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412504282"/>
+        <destination idref="ID1412506461"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>19:10-&gt;17 @ 7 Department&apos;Resources_Constraints 1: {task=(&quot;A&quot;,5,3),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[(&quot;B&quot;,7,2)]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412507559"
+             order="1"
+             number="15">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412505370"/>
+        <destination idref="ID1412507555"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>15:11-&gt;13 @ 5 Department&apos;Resources_Constraints 1: {task=(&quot;B&quot;,7,2),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[(&quot;A&quot;,5,3)]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412508656"
+             order="1"
+             number="16">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412503197"/>
+        <destination idref="ID1412508652"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>16:12-&gt;14 @ 5 Department&apos;Resources_Constraints 1: {task=(&quot;C&quot;,10,1),constraints=[BEFORE((&quot;A&quot;,&quot;B&quot;))],tasks=[(&quot;A&quot;,5,3)]}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412509756"
+             order="1"
+             number="18">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412508652"/>
+        <destination idref="ID1412509752"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>18:14-&gt;16 @ 7 Department&apos;Completed 1: {tasks=[(&quot;A&quot;,5,3)],task=(&quot;B&quot;,7,2)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412510859"
+             order="1"
+             number="17">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412507555"/>
+        <destination idref="ID1412510855"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>17:13-&gt;15 @ 10 Department&apos;Completed 1: {tasks=[(&quot;A&quot;,5,3)],task=(&quot;C&quot;,10,1)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412511965"
+             order="1"
+             number="21">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412506461"/>
+        <destination idref="ID1412511961"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>21:17-&gt;19 @ 10 Department&apos;Completed 1: {tasks=[(&quot;B&quot;,7,2)],task=(&quot;C&quot;,10,1)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412513074"
+             order="1"
+             number="23">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412511961"/>
+        <destination idref="ID1412513070"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>23:19-&gt;21 @ 12 Department&apos;Completed 1: {tasks=[(&quot;C&quot;,10,1),(&quot;B&quot;,7,2)],task=(&quot;A&quot;,5,3)}</text>
+        </descriptor>
+      </ssarc>
+      <ssarc id="ID1412540328"
+             order="1"
+             number="20">
+        <posattr x="0.000000"
+                 y="0.000000"/>
+        <fillattr colour="White"
+                  pattern="Solid"
+                  filled="false"/>
+        <lineattr colour=""
+                  thick="0"
+                  type="Solid"/>
+        <textattr colour=""
+                  bold="false"/>
+        <arrowattr headsize="1.000000"
+                   currentcyckle="2"/>
+        <source idref="ID1412509752"/>
+        <destination idref="ID1412540324"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>20:16-&gt;18 @ 15 Department&apos;Completed 1: {tasks=[(&quot;B&quot;,7,2),(&quot;A&quot;,5,3)],task=(&quot;C&quot;,10,1)}</text>
+        </descriptor>
+      </ssarc>
+      <ssnode id="ID1412495649"
+              number="1"
+              predecessors="0"
+              successors="1">
+        <posattr x="-196.000000"
+                 y="125.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>1 @ 0:
+Department&apos;Task_Constraints 1: empty
+Department&apos;Department1_Tasks 1: empty
+Department&apos;Engineer_Resources 1: 5`Engineer
+Department&apos;Completed_Tasks 1: 1`[]
+Department&apos;Execute 1: empty
+ProductionPlanning&apos;Incoming_Order 1: 1`()
+ProductionPlanning&apos;Department1_Tasks 1: empty
+ProductionPlanning&apos;Task_Constraints 1: empty
+ProductionPlanning&apos;Engineer_Resources 1: 5`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412496707"
+              number="2"
+              predecessors="1"
+              successors="1">
+        <posattr x="-115.000000"
+                 y="125.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>2 @ 0:
+Department&apos;Task_Constraints 1: empty
+Department&apos;Department1_Tasks 1: empty
+Department&apos;Engineer_Resources 1: 5`Engineer
+Department&apos;Completed_Tasks 1: 1`[]
+Department&apos;Execute 1: empty
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: empty
+ProductionPlanning&apos;Task_Constraints 1: empty
+ProductionPlanning&apos;Engineer_Resources 1: 5`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[]
+ProductionPlanning&apos;Order_Received 1: 1`()</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412497774"
+              number="3"
+              predecessors="1"
+              successors="3">
+        <posattr x="-34.000000"
+                 y="125.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>3 @ 0:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: 1`(&quot;A&quot;,5,3)@0+++
+1`(&quot;B&quot;,7,2)@0+++
+1`(&quot;C&quot;,10,1)@0
+Department&apos;Engineer_Resources 1: 5`Engineer
+Department&apos;Completed_Tasks 1: 1`[]
+Department&apos;Execute 1: empty
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: 1`(&quot;A&quot;,5,3)@0+++
+1`(&quot;B&quot;,7,2)@0+++
+1`(&quot;C&quot;,10,1)@0
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 5`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412498848"
+              number="6"
+              predecessors="1"
+              successors="2">
+        <posattr x="47.000000"
+                 y="125.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>6 @ 0:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: 1`(&quot;B&quot;,7,2)@0+++
+1`(&quot;C&quot;,10,1)@0
+Department&apos;Engineer_Resources 1: 2`Engineer
+Department&apos;Completed_Tasks 1: 1`[]
+Department&apos;Execute 1: 1`(&quot;A&quot;,5,3)@5
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: 1`(&quot;B&quot;,7,2)@0+++
+1`(&quot;C&quot;,10,1)@0
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 2`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412498852"
+              number="5"
+              predecessors="1"
+              successors="2">
+        <posattr x="54.000000"
+                 y="35.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>5 @ 0:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: 1`(&quot;A&quot;,5,3)@0+++
+1`(&quot;C&quot;,10,1)@0
+Department&apos;Engineer_Resources 1: 3`Engineer
+Department&apos;Completed_Tasks 1: 1`[]
+Department&apos;Execute 1: 1`(&quot;B&quot;,7,2)@7
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: 1`(&quot;A&quot;,5,3)@0+++
+1`(&quot;C&quot;,10,1)@0
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 3`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412498856"
+              number="4"
+              predecessors="1"
+              successors="2">
+        <posattr x="59.000000"
+                 y="-49.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>4 @ 0:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: 1`(&quot;A&quot;,5,3)@0+++
+1`(&quot;B&quot;,7,2)@0
+Department&apos;Engineer_Resources 1: 4`Engineer
+Department&apos;Completed_Tasks 1: 1`[]
+Department&apos;Execute 1: 1`(&quot;C&quot;,10,1)@10
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: 1`(&quot;A&quot;,5,3)@0+++
+1`(&quot;B&quot;,7,2)@0
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 4`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412499941"
+              number="8"
+              predecessors="2"
+              successors="1">
+        <posattr x="169.000000"
+                 y="9.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>8 @ 0:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: 1`(&quot;B&quot;,7,2)@0
+Department&apos;Engineer_Resources 1: 1`Engineer
+Department&apos;Completed_Tasks 1: 1`[]
+Department&apos;Execute 1: 1`(&quot;A&quot;,5,3)@5+++
+1`(&quot;C&quot;,10,1)@10
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: 1`(&quot;B&quot;,7,2)@0
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 1`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412499945"
+              number="7"
+              predecessors="2"
+              successors="1">
+        <posattr x="171.000000"
+                 y="-48.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>7 @ 0:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: 1`(&quot;A&quot;,5,3)@0
+Department&apos;Engineer_Resources 1: 2`Engineer
+Department&apos;Completed_Tasks 1: 1`[]
+Department&apos;Execute 1: 1`(&quot;B&quot;,7,2)@7+++
+1`(&quot;C&quot;,10,1)@10
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: 1`(&quot;A&quot;,5,3)@0
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 2`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412501028"
+              number="9"
+              predecessors="2"
+              successors="1">
+        <posattr x="164.000000"
+                 y="73.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>9 @ 0:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: 1`(&quot;C&quot;,10,1)@0
+Department&apos;Engineer_Resources 1: empty
+Department&apos;Completed_Tasks 1: 1`[]
+Department&apos;Execute 1: 1`(&quot;A&quot;,5,3)@5+++
+1`(&quot;B&quot;,7,2)@7
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: 1`(&quot;C&quot;,10,1)@0
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: empty
+ProductionPlanning&apos;Completed_Tasks 1: 1`[]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412503197"
+              number="12"
+              predecessors="1"
+              successors="1">
+        <posattr x="257.000000"
+                 y="73.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>12 @ 5:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: 1`(&quot;C&quot;,10,1)@0
+Department&apos;Engineer_Resources 1: 3`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;A&quot;,5,3)]
+Department&apos;Execute 1: 1`(&quot;B&quot;,7,2)@7
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: 1`(&quot;C&quot;,10,1)@0
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 3`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;A&quot;,5,3)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412504282"
+              number="10"
+              predecessors="1"
+              successors="1">
+        <posattr x="268.000000"
+                 y="-53.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>10 @ 7:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: 1`(&quot;A&quot;,5,3)@0
+Department&apos;Engineer_Resources 1: 4`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;B&quot;,7,2)]
+Department&apos;Execute 1: 1`(&quot;C&quot;,10,1)@10
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: 1`(&quot;A&quot;,5,3)@0
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 4`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;B&quot;,7,2)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412505370"
+              number="11"
+              predecessors="1"
+              successors="1">
+        <posattr x="262.000000"
+                 y="13.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>11 @ 5:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: 1`(&quot;B&quot;,7,2)@0
+Department&apos;Engineer_Resources 1: 4`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;A&quot;,5,3)]
+Department&apos;Execute 1: 1`(&quot;C&quot;,10,1)@10
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: 1`(&quot;B&quot;,7,2)@0
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 4`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;A&quot;,5,3)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412506461"
+              number="17"
+              predecessors="1"
+              successors="1">
+        <posattr x="361.000000"
+                 y="-55.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>17 @ 7:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: empty
+Department&apos;Engineer_Resources 1: 1`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;B&quot;,7,2)]
+Department&apos;Execute 1: 1`(&quot;A&quot;,5,3)@12+++
+1`(&quot;C&quot;,10,1)@10
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: empty
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 1`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;B&quot;,7,2)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412507555"
+              number="13"
+              predecessors="1"
+              successors="1">
+        <posattr x="365.000000"
+                 y="13.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>13 @ 5:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: empty
+Department&apos;Engineer_Resources 1: 2`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;A&quot;,5,3)]
+Department&apos;Execute 1: 1`(&quot;B&quot;,7,2)@12+++
+1`(&quot;C&quot;,10,1)@10
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: empty
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 2`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;A&quot;,5,3)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412508652"
+              number="14"
+              predecessors="1"
+              successors="1">
+        <posattr x="354.000000"
+                 y="72.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>14 @ 5:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: empty
+Department&apos;Engineer_Resources 1: 2`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;A&quot;,5,3)]
+Department&apos;Execute 1: 1`(&quot;B&quot;,7,2)@7+++
+1`(&quot;C&quot;,10,1)@15
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: empty
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 2`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;A&quot;,5,3)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412509752"
+              number="16"
+              predecessors="1"
+              successors="1">
+        <posattr x="449.000000"
+                 y="75.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="10.000000"
+                    y="-233.000000"
+                    visible="false"
+                    dead="true">
+          <text>16 @ 7:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: empty
+Department&apos;Engineer_Resources 1: 4`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;B&quot;,7,2),(&quot;A&quot;,5,3)]
+Department&apos;Execute 1: 1`(&quot;C&quot;,10,1)@15
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: empty
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 4`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;B&quot;,7,2),(&quot;A&quot;,5,3)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412510855"
+              number="15"
+              predecessors="1"
+              successors="1">
+        <posattr x="457.000000"
+                 y="14.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="143.000000"
+                    y="-98.000000"
+                    visible="true"
+                    dead="true">
+          <text>15 @ 10:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: empty
+Department&apos;Engineer_Resources 1: 3`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;C&quot;,10,1),(&quot;A&quot;,5,3)]
+Department&apos;Execute 1: 1`(&quot;B&quot;,7,2)@12
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: empty
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 3`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;C&quot;,10,1),(&quot;A&quot;,5,3)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="38.000000"/>
+      </ssnode>
+      <ssnode id="ID1412511961"
+              number="19"
+              predecessors="1"
+              successors="1">
+        <posattr x="460.000000"
+                 y="-51.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
+          <text>19 @ 10:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: empty
+Department&apos;Engineer_Resources 1: 2`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;C&quot;,10,1),(&quot;B&quot;,7,2)]
+Department&apos;Execute 1: 1`(&quot;A&quot;,5,3)@12
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: empty
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 2`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;C&quot;,10,1),(&quot;B&quot;,7,2)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+      <ssnode id="ID1412513070"
+              number="21"
+              predecessors="1"
+              successors="0">
+        <posattr x="555.000000"
+                 y="-57.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="-321.000000"
+                    y="78.000000"
+                    visible="true"
+                    dead="true">
+          <text>21 @ 12:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: empty
+Department&apos;Engineer_Resources 1: 5`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;A&quot;,5,3),(&quot;C&quot;,10,1),(&quot;B&quot;,7,2)]
+Department&apos;Execute 1: empty
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: empty
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 5`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;A&quot;,5,3),(&quot;C&quot;,10,1),(&quot;B&quot;,7,2)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="44.000000"/>
+      </ssnode>
+      <ssnode id="ID1412540324"
+              number="18"
+              predecessors="1"
+              successors="0">
+        <posattr x="530.000000"
+                 y="75.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Gray"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Gray"
+                  bold="false"/>
+        <descriptor x="-306.000000"
+                    y="-251.000000"
+                    visible="true"
+                    dead="true">
+          <text>18 @ 15:
+Department&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+Department&apos;Department1_Tasks 1: empty
+Department&apos;Engineer_Resources 1: 5`Engineer
+Department&apos;Completed_Tasks 1: 1`[(&quot;C&quot;,10,1),(&quot;B&quot;,7,2),(&quot;A&quot;,5,3)]
+Department&apos;Execute 1: empty
+ProductionPlanning&apos;Incoming_Order 1: empty
+ProductionPlanning&apos;Department1_Tasks 1: empty
+ProductionPlanning&apos;Task_Constraints 1: 1`[BEFORE((&quot;A&quot;,&quot;B&quot;))]
+ProductionPlanning&apos;Engineer_Resources 1: 5`Engineer
+ProductionPlanning&apos;Completed_Tasks 1: 1`[(&quot;C&quot;,10,1),(&quot;B&quot;,7,2),(&quot;A&quot;,5,3)]
+ProductionPlanning&apos;Order_Received 1: empty</text>
+        </descriptor>
+        <roundbox w="45.000000"
+                  h="40.000000"/>
+      </ssnode>
+    </page>
+    <instances>
+      <instance id="ID2149"
+                page="ID6">
+        <instance id="ID1412367669"
+                  trans="ID1412367610"/>
+      </instance>
+      <instance id="ID1412493540"
+                page="ID1412493538"/>
+    </instances>
+    <options>
+      <option name="realtimestamp">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="fair_be">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="global_fairness">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="outputdirectory">
+        <value>
+          <text>&lt;same as model&gt;</text>
+        </value>
+      </option>
+      <option name="repavg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repciavg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repcount">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repfirstval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="replastval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repmax">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repmin">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repssquare">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repssqdev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repstddev">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="repsum">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="repvariance">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="avg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="ciavg">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="count">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="firstval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="lastval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="max">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="min">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="ssquare">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="ssqdev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="stddev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="sum">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="variance">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="firstupdate">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="interval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="lastupdate">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedavg">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedciavg">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedcount">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedfirstval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedlastval">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedmax">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedmin">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedssquare">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedssqdev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedstddev">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+      <option name="untimedsum">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="untimedvariance">
+        <value>
+          <boolean>false</boolean>
+        </value>
+      </option>
+    </options>
+    <binders>
+      <cpnbinder id="ID2222"
+                 x="423"
+                 y="34"
+                 width="1193"
+                 height="772">
+        <sheets>
+          <cpnsheet id="ID2215"
+                    panx="25.000000"
+                    pany="-117.000000"
+                    zoom="1.000000"
+                    instance="ID2149">
+            <zorder>
+              <position value="0"/>
+            </zorder>
+          </cpnsheet>
+          <cpnsheet id="ID1412368875"
+                    panx="50.000000"
+                    pany="-216.000000"
+                    zoom="1.000000"
+                    instance="ID1412367669">
+            <zorder>
+              <position value="0"/>
+            </zorder>
+          </cpnsheet>
+          <cpnsheet id="ID1412493545"
+                    panx="-383.000000"
+                    pany="-14.000000"
+                    zoom="1.000000"
+                    instance="ID1412493540">
+            <zorder>
+              <position value="0"/>
+            </zorder>
+          </cpnsheet>
+        </sheets>
+        <zorder>
+          <position value="0"/>
+          <position value="1"/>
+          <position value="2"/>
+        </zorder>
+      </cpnbinder>
+    </binders>
+    <monitorblock name="Monitors"/>
+    <IndexNode expanded="true">
+      <IndexNode expanded="false"/>
+      <IndexNode expanded="false"/>
+      <IndexNode expanded="false">
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false">
+          <IndexNode expanded="false">
+            <IndexNode expanded="false">
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+            </IndexNode>
+            <IndexNode expanded="false">
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+            </IndexNode>
+          </IndexNode>
+          <IndexNode expanded="false">
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+            <IndexNode expanded="false"/>
+          </IndexNode>
+        </IndexNode>
+      </IndexNode>
+      <IndexNode expanded="false">
+        <IndexNode expanded="false"/>
+      </IndexNode>
+      <IndexNode expanded="true">
+        <IndexNode expanded="false">
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+          <IndexNode expanded="true"/>
+        </IndexNode>
+        <IndexNode expanded="true">
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+        </IndexNode>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+        <IndexNode expanded="true"/>
+      </IndexNode>
+      <IndexNode expanded="false"/>
+      <IndexNode expanded="true">
+        <IndexNode expanded="true"/>
+      </IndexNode>
+      <IndexNode expanded="true"/>
+    </IndexNode>
+  </cpnet>
+</workspaceElements>
