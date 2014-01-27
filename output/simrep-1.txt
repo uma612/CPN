@@ -1,0 +1,37 @@
+CPN Tools simulation report for:
+/cygdrive/C/Users/DELL/Documents/GitRepository/ProductionPlanningv14.3.cpn
+Report generated: Mon Jan 27 15:41:14 2014
+
+1	0	Init @ (1:ProductionPlanning)
+2	0	Determine_Parts @ (1:ProductionPlanning)
+ - inorder = Order(2)
+ - orderlist = [(Order(1),[Part(1)]),(Order(2),[Part(1),Part(2)])]
+3	0	Determine_Parts @ (1:ProductionPlanning)
+ - inorder = Order(1)
+ - orderlist = [(Order(1),[Part(1)]),(Order(2),[Part(1),Part(2)])]
+4	0	Determine_Tasks @ (1:ProductionPlanning)
+ - partlist = [Part(1)]
+ - tasklist = [(Part(1),[("A",5,3),("B",4,2),("C",5,2)]),(Part(2),[("C",5,2),("A",5,3)]),(Part(3),[("A",5,3)])]
+5	0	Determine_Tasks @ (1:ProductionPlanning)
+ - partlist = [Part(1),Part(2)]
+ - tasklist = [(Part(1),[("A",5,3),("B",4,2),("C",5,2)]),(Part(2),[("C",5,2),("A",5,3)]),(Part(3),[("A",5,3)])]
+6	0	Determine_Dept @ (1:Production)
+ - tasks = [("A",5,3),("B",4,2),("C",5,2)]
+7	0	Determine_Dept @ (1:Production)
+ - tasks = [("A",5,3),("B",4,2),("C",5,2),("C",5,2),("A",5,3)]
+8	0	Determine_Constraints @ (1:Department)
+ - task = ("A",5,3)
+9	0	Determine_Constraints @ (1:Department)
+ - task = ("A",5,3)
+10	0	Determine_Constraints @ (1:Department)
+ - task = ("A",5,3)
+11	0	Determine_Constraints @ (2:Department)
+ - task = ("B",4,2)
+12	0	Determine_Constraints @ (2:Department)
+ - task = ("B",4,2)
+13	0	Determine_Constraints @ (3:Department)
+ - task = ("C",5,2)
+14	0	Determine_Constraints @ (3:Department)
+ - task = ("C",5,2)
+15	0	Determine_Constraints @ (3:Department)
+ - task = ("C",5,2)
