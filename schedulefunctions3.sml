@@ -86,7 +86,7 @@ currentpath := List.tl (!currentpath)
            )
         else
 	    (currentpath:=(node)::(!currentpath);
-            currentss:=(node,(!sleepstate))::(!currentss);
+           currentss:=(node,(!sleepstate))::(!currentss);
              print ("after adding node" ^ (Int.toString node) ^ "\n");
 print ("hd(tl)"^(Int.toString (hd(tl(!currentpath))))^"\n");
              getSchedule(hd(tl(!currentpath)),node); 
@@ -120,39 +120,9 @@ and checkvalidpath validmarkings node =
 		addNodeToPath(node,false))
 end;
 
-(* Result*)
+
 val paths=validpaths(1);
-
-(*!validpath;*)
-
 !currentss;
-
-(*!schedule;
-
-val sch = !allschedules
-
-val allschedules = List.length(!allschedules);				
-
-val l = List.length(!validpath)
-
-(* Schedule for all valid dead markings(one schedule for each)*)
-
-fun getPaths() validmark=ArcsInPath(1,validmark);
-
-fun getAllPaths(validmarkings)= List.map(getPaths())validmarkings;
-
-val allPathArcs= getAllPaths(validmarkings);
-
-fun schedule() path= List.map (fn arc => (CreationTime(DestNode(arc)),maparc arc)) path;
-
-fun getAllSchedule(allPathArcs)=List.map(schedule())allPathArcs;
-
-val paths= getAllSchedule(allPathArcs);*)
-
-
-(*------------------------*)
-
-
 
 
 
