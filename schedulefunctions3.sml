@@ -122,7 +122,7 @@ end;
 
 
 val paths=validpaths(1);
-!currentss;
+
 
 
 
