@@ -7,7 +7,7 @@ val schedule: (time * (string * TaskName) option) list ref =ref[];
 val allschedules:  (time * (string * TaskName) option) list list ref =ref[];
 val validpath :Node list list ref=ref[];
 val currentpath :Node list ref=ref[1];
-
+open TI;
 val sleepstate: TransInst list ref= ref[];
 val currentss: (Node*TransInst list) list ref=ref[];
 
@@ -123,7 +123,11 @@ end;
 
 
 val paths=validpaths(1);
-!currentss;
+val sch = !allschedules;
+val allschedules = List.length(!allschedules);	
+!schedule;			
+
+
 
 
 
