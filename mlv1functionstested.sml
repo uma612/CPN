@@ -99,3 +99,24 @@ true
 else checkvalidnode(node,tl(dm));
 
 ------------------------- added in sml3------------------
+
+fun findArcForPath() validpath=
+let 
+val arcs=[]
+in
+if (length(validpath))<>[] then
+arcs=ArcsInPath(hd(validpath),hd(tl(validpath)))
+else
+arcs=[]
+end;
+
+fun eachPath() validpathnodes=
+print ("after adding node" ^ (Int.toString validpathnodes) ^ "\n");
+
+fun getEachPath(validpath)=List.map(findArcForPath()) validpath;
+
+checkvalidnode(node,validmarkings)=
+if node=hd(validmarkings) then
+true
+else checkvalidnode(node,tl(validmarkings))
+
