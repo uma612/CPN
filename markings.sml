@@ -7,7 +7,7 @@ val tokens=TMS.ms tms;
 
 
 
-fun itsgr8(tms,dm)=List.map(valid(tms)) dm 
+fun getList(tms,dm)=List.map(valid(tms)) dm 
 
 and valid(tms) dm=
 let 
@@ -29,6 +29,6 @@ end;
 
 
 
-val g=itsgr8(tokens,dm);
+val g=getList(tokens,dm);
 val t=List.filter(fn t=> t<>0)g;
 
