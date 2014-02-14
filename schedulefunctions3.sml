@@ -1,8 +1,17 @@
 val departments=[1,2,3];
 val dm = ListDeadMarkings ();
+
+use "markings.sml";
+
+(*
 fun validmarking(n) =List.all(fn dept => Mark.Department'Task (dept)  n = []) departments;
 fun checkValidMarking(dm) = List.filter validmarking dm;
 val validmarkings= checkValidMarking(dm);
+
+
+*)
+
+
 val schedule: (time * (string * TaskName) option) list ref =ref[];
 val allschedules:  (time * (string * TaskName) option) list list ref =ref[];
 val validpath :Node list list ref=ref[];
@@ -52,7 +61,7 @@ and getNodeList(allarcs) =
 	   val nodelist=List.map(fn arc=>DestNode(arc)) allarcs
 	in 
            
-	   List.app (checkvalidpath(validmarkings)) nodelist
+	   List.app (checkvalidpath(validdeadmarkings)) nodelist
 	end
 
 and getSchedule(sourcenode,destnode)=
@@ -98,20 +107,20 @@ print ("hd(tl)"^(Int.toString (hd(tl(!currentpath))))^"\n");
 	     print ("after taking the tail of currentpath")
              )
 
-and checkvalidnode(node,validmarkings)=
-	if validmarkings<>[] then
-   	   if node=hd(validmarkings) then 
+and checkvalidnode(node,validdeadmarkings)=
+	if validdeadmarkings<>[] then
+   	   if node=hd(validdeadmarkings) then 
               true
     	   else 
-             checkvalidnode(node,tl(validmarkings))
+             checkvalidnode(node,tl(validdeadmarkings))
 	else false
 
-and checkvalidpath validmarkings node =
+and checkvalidpath validdeadmarkings node =
     	let
            val destpath=ref []
         in
 	  if (length(OutArcs(node))=0) then
-    		if checkvalidnode(node,validmarkings) then
+    		if checkvalidnode(node,validdeadmarkings) then
      		 (print ("Inside checkvalidpath if cond" ^(Int.toString node)^"\n");  
 		addNodeToPath(node,true))
      

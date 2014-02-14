@@ -118,5 +118,7 @@ fun getEachPath(validpath)=List.map(findArcForPath()) validpath;
 checkvalidnode(node,validmarkings)=
 if node=hd(validmarkings) then
 true
-else checkvalidnode(node,tl(validmarkings))
+else checkvalidnode(node,tl(validmarkings));
+
+ArcsInPath(1,1);
 
