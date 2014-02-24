@@ -1,0 +1,1 @@
+[(5,SOME("stop","C")),(5,SOME("stop","A")),(4,SOME("stop","B"))]
