@@ -2671,8 +2671,8 @@ Received</text>
         <text>Init</text>
         <box w="30.000000"
              h="20.000000"/>
-        <binding x="9.200000"
-                 y="-2.000000"/>
+        <binding x="7.200000"
+                 y="-3.000000"/>
         <cond id="ID1434946725">
           <posattr x="415.000000"
                    y="317.000000"/>
@@ -3109,8 +3109,8 @@ List.all (DetermineListofTasks (partlist)) tasklist;</text>
                  h="40.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="20.000000"
-                 y="14.000000"
+        <marking x="-89.000000"
+                 y="115.000000"
                  hidden="false">
           <snap snap_id="0"
                 anchor.horizontal="3"
@@ -4965,7 +4965,7 @@ Constraints</text>
                  h="38.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="-28.000000"
+        <marking x="5.000000"
                  y="20.000000"
                  hidden="false">
           <snap snap_id="0"
@@ -6171,20 +6171,6 @@ Mark.Department&apos;Task 3  1;</text>
     </page>
     <page id="ID1435856770">
       <pageattr name="Statespace"/>
-      <Aux id="ID1435904769">
-        <posattr x="-343.000000"
-                 y="-187.000000"/>
-        <fillattr colour="White"
-                  pattern=""
-                  filled="false"/>
-        <lineattr colour="Black"
-                  thick="1"
-                  type="Solid"/>
-        <textattr colour="Black"
-                  bold="false"/>
-        <label/>
-        <text>open TI;</text>
-      </Aux>
       <ssarc id="ID1435856929"
              order="1"
              number="1">
@@ -6202,9 +6188,9 @@ Mark.Department&apos;Task 3  1;</text>
                    currentcyckle="2"/>
         <source idref="ID1435856890"/>
         <destination idref="ID1435856925"/>
-        <descriptor x="-54.000000"
-                    y="-71.000000"
-                    visible="true"
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
                     dead="true">
           <text>1:1-&gt;2 @ 0 ProductionPlanning&apos;Init 1: {}</text>
         </descriptor>
@@ -6939,7 +6925,7 @@ Mark.Department&apos;Task 3  1;</text>
         <destination idref="ID1435861630"/>
         <descriptor x="-542.000000"
                     y="-40.000000"
-                    visible="false"
+                    visible="true"
                     dead="true">
           <text>33:22-&gt;24 @ 5 Department&apos;Completed 1: {partialtasks=[(&quot;A&quot;,5,3)],tasks=[(&quot;C&quot;,5,2),(&quot;B&quot;,4,2)],task=(&quot;A&quot;,5,3)}</text>
         </descriptor>
@@ -6963,7 +6949,7 @@ Mark.Department&apos;Task 3  1;</text>
         <destination idref="ID1435861978"/>
         <descriptor x="-420.000000"
                     y="40.000000"
-                    visible="false"
+                    visible="true"
                     dead="true">
           <text>32:21-&gt;23 @ 5 Department&apos;Completed 3: {partialtasks=[(&quot;C&quot;,5,2)],tasks=[(&quot;A&quot;,5,3),(&quot;B&quot;,4,2)],task=(&quot;C&quot;,5,2)}</text>
         </descriptor>
@@ -8507,35 +8493,7 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
     </page>
     <page id="ID1435890588">
       <pageattr name="Partialstatespace"/>
-      <Aux id="ID1435910396">
-        <posattr x="-358.000000"
-                 y="-11.000000"/>
-        <fillattr colour="White"
-                  pattern=""
-                  filled="false"/>
-        <lineattr colour="Black"
-                  thick="1"
-                  type="Solid"/>
-        <textattr colour="Black"
-                  bold="false"/>
-        <label/>
-        <text>use &quot;schedulefunctions.sml&quot;</text>
-      </Aux>
-      <Aux id="ID1435910935">
-        <posattr x="-261.000000"
-                 y="53.000000"/>
-        <fillattr colour="White"
-                  pattern=""
-                  filled="false"/>
-        <lineattr colour="Black"
-                  thick="1"
-                  type="Solid"/>
-        <textattr colour="Black"
-                  bold="false"/>
-        <label/>
-        <text>OutArcs(1)</text>
-      </Aux>
-      <ssarc id="ID1435908290"
+      <ssarc id="ID1435892378"
              order="1"
              number="1">
         <posattr x="0.000000"
@@ -8543,23 +8501,23 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
-        <source idref="ID1435908041"/>
-        <destination idref="ID1435908286"/>
-        <descriptor x="-49.000000"
-                    y="-94.000000"
-                    visible="true"
-                    dead="false">
+        <source idref="ID1435891922"/>
+        <destination idref="ID1435892374"/>
+        <descriptor x="-46.000000"
+                    y="-70.000000"
+                    visible="false"
+                    dead="true">
           <text>1:1-&gt;2 @ 0 Department&apos;Start_Task 1: {constraints=[(&quot;&quot;,&quot;A&quot;,NoConstraint)],tasks=[],partialtasks=[],task=(&quot;A&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
-      <ssarc id="ID1435908544"
+      <ssarc id="ID1435892839"
              order="1"
              number="2">
         <posattr x="0.000000"
@@ -8567,23 +8525,23 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
-        <source idref="ID1435908286"/>
-        <destination idref="ID1435908540"/>
-        <descriptor x="-207.000000"
-                    y="139.000000"
-                    visible="true"
-                    dead="false">
+        <source idref="ID1435892374"/>
+        <destination idref="ID1435892835"/>
+        <descriptor x="0.000000"
+                    y="0.000000"
+                    visible="false"
+                    dead="true">
           <text>2:2-&gt;3 @ 0 Department&apos;Start_Task 3: {constraints=[(&quot;A&quot;,&quot;C&quot;,InProcess)],tasks=[],partialtasks=[(&quot;A&quot;,5,3)],task=(&quot;C&quot;,5,2)}</text>
         </descriptor>
       </ssarc>
-      <ssarc id="ID1435908801"
+      <ssarc id="ID1435893303"
              order="1"
              number="3">
         <posattr x="0.000000"
@@ -8591,23 +8549,23 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
-        <source idref="ID1435908540"/>
-        <destination idref="ID1435908797"/>
+        <source idref="ID1435892835"/>
+        <destination idref="ID1435893299"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>3:3-&gt;4 @ 0 Department&apos;Start_Task 2: {constraints=[(&quot;A&quot;,&quot;B&quot;,InProcess),(&quot;C&quot;,&quot;B&quot;,InProcess)],tasks=[],partialtasks=[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3)],task=(&quot;B&quot;,4,2)}</text>
         </descriptor>
       </ssarc>
-      <ssarc id="ID1435909061"
+      <ssarc id="ID1435893770"
              order="1"
              number="4">
         <posattr x="0.000000"
@@ -8615,23 +8573,23 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
-        <source idref="ID1435908797"/>
-        <destination idref="ID1435909057"/>
+        <source idref="ID1435893299"/>
+        <destination idref="ID1435893766"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>4:4-&gt;5 @ 4 Department&apos;Completed 2: {partialtasks=[(&quot;B&quot;,4,2),(&quot;C&quot;,5,2),(&quot;A&quot;,5,3)],tasks=[],task=(&quot;B&quot;,4,2)}</text>
         </descriptor>
       </ssarc>
-      <ssarc id="ID1435909330"
+      <ssarc id="ID1435894246"
              order="1"
              number="6">
         <posattr x="0.000000"
@@ -8639,23 +8597,23 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
-        <source idref="ID1435909057"/>
-        <destination idref="ID1435909322"/>
+        <source idref="ID1435893766"/>
+        <destination idref="ID1435894238"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>6:5-&gt;7 @ 5 Department&apos;Completed 3: {partialtasks=[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3)],tasks=[(&quot;B&quot;,4,2)],task=(&quot;C&quot;,5,2)}</text>
         </descriptor>
       </ssarc>
-      <ssarc id="ID1435909335"
+      <ssarc id="ID1435894251"
              order="1"
              number="5">
         <posattr x="0.000000"
@@ -8663,23 +8621,23 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
-        <source idref="ID1435909057"/>
-        <destination idref="ID1435909326"/>
+        <source idref="ID1435893766"/>
+        <destination idref="ID1435894242"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>5:5-&gt;6 @ 5 Department&apos;Completed 1: {partialtasks=[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3)],tasks=[(&quot;B&quot;,4,2)],task=(&quot;A&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
-      <ssarc id="ID1435909857"
+      <ssarc id="ID1435895649"
              order="1"
              number="8">
         <posattr x="0.000000"
@@ -8687,23 +8645,23 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
-        <source idref="ID1435909322"/>
-        <destination idref="ID1435909853"/>
-        <descriptor x="0.000000"
-                    y="0.000000"
+        <source idref="ID1435894238"/>
+        <destination idref="ID1435895645"/>
+        <descriptor x="-278.000000"
+                    y="-53.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>8:7-&gt;9 @ 5 Department&apos;Completed 1: {partialtasks=[(&quot;A&quot;,5,3)],tasks=[(&quot;C&quot;,5,2),(&quot;B&quot;,4,2)],task=(&quot;A&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
-      <ssarc id="ID1435910129"
+      <ssarc id="ID1435896125"
              order="1"
              number="7">
         <posattr x="0.000000"
@@ -8711,40 +8669,40 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
-        <source idref="ID1435909326"/>
-        <destination idref="ID1435910125"/>
-        <descriptor x="0.000000"
-                    y="0.000000"
+        <source idref="ID1435894242"/>
+        <destination idref="ID1435896121"/>
+        <descriptor x="-353.000000"
+                    y="47.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>7:6-&gt;8 @ 5 Department&apos;Completed 3: {partialtasks=[(&quot;C&quot;,5,2)],tasks=[(&quot;A&quot;,5,3),(&quot;B&quot;,4,2)],task=(&quot;C&quot;,5,2)}</text>
         </descriptor>
       </ssarc>
-      <ssnode id="ID1435908041"
+      <ssnode id="ID1435891922"
               number="1"
               predecessors="0"
               successors="1">
-        <posattr x="-670.000000"
-                 y="315.000000"/>
+        <posattr x="-599.000000"
+                 y="106.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>1 @ 0:
 Department&apos;Completed_Tasks 3: 1`[]
 Department&apos;Completed_Tasks 2: 1`[]
@@ -8784,30 +8742,29 @@ Production&apos;Eng_res_dept2 1: 5`Engineer
 Production&apos;Eng_res_dept3 1: 2`Engineer
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[]
-</text>
+ProductionSystem&apos;Completed 1: 1`[]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
       </ssnode>
-      <ssnode id="ID1435908286"
+      <ssnode id="ID1435892374"
               number="2"
               predecessors="1"
               successors="1">
-        <posattr x="-589.000000"
-                 y="315.000000"/>
+        <posattr x="-518.000000"
+                 y="106.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>2 @ 0:
 Department&apos;Completed_Tasks 3: 1`[]
 Department&apos;Completed_Tasks 2: 1`[]
@@ -8847,30 +8804,29 @@ Production&apos;Eng_res_dept2 1: 5`Engineer
 Production&apos;Eng_res_dept3 1: 2`Engineer
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[]
-</text>
+ProductionSystem&apos;Completed 1: 1`[]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
       </ssnode>
-      <ssnode id="ID1435908540"
+      <ssnode id="ID1435892835"
               number="3"
               predecessors="1"
               successors="1">
-        <posattr x="-508.000000"
-                 y="315.000000"/>
+        <posattr x="-437.000000"
+                 y="106.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>3 @ 0:
 Department&apos;Completed_Tasks 3: 1`[]
 Department&apos;Completed_Tasks 2: 1`[]
@@ -8910,30 +8866,29 @@ Production&apos;Eng_res_dept2 1: 5`Engineer
 Production&apos;Eng_res_dept3 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[]
-</text>
+ProductionSystem&apos;Completed 1: 1`[]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
       </ssnode>
-      <ssnode id="ID1435908797"
+      <ssnode id="ID1435893299"
               number="4"
               predecessors="1"
               successors="1">
-        <posattr x="-427.000000"
-                 y="315.000000"/>
+        <posattr x="-356.000000"
+                 y="106.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>4 @ 0:
 Department&apos;Completed_Tasks 3: 1`[]
 Department&apos;Completed_Tasks 2: 1`[]
@@ -8973,30 +8928,29 @@ Production&apos;Eng_res_dept2 1: 3`Engineer
 Production&apos;Eng_res_dept3 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[]
-</text>
+ProductionSystem&apos;Completed 1: 1`[]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
       </ssnode>
-      <ssnode id="ID1435909057"
+      <ssnode id="ID1435893766"
               number="5"
               predecessors="1"
               successors="2">
-        <posattr x="-346.000000"
-                 y="315.000000"/>
+        <posattr x="-275.000000"
+                 y="106.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>5 @ 4:
 Department&apos;Completed_Tasks 3: 1`[(&quot;B&quot;,4,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;B&quot;,4,2)]
@@ -9036,30 +8990,29 @@ Production&apos;Eng_res_dept2 1: 5`Engineer
 Production&apos;Eng_res_dept3 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;B&quot;,4,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;B&quot;,4,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
       </ssnode>
-      <ssnode id="ID1435909322"
+      <ssnode id="ID1435894238"
               number="7"
               predecessors="1"
               successors="1">
-        <posattr x="-265.000000"
-                 y="315.000000"/>
+        <posattr x="-194.000000"
+                 y="106.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>7 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;C&quot;,5,2),(&quot;B&quot;,4,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;C&quot;,5,2),(&quot;B&quot;,4,2)]
@@ -9099,30 +9052,29 @@ Production&apos;Eng_res_dept2 1: 5`Engineer
 Production&apos;Eng_res_dept3 1: 2`Engineer
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;B&quot;,4,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;B&quot;,4,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
       </ssnode>
-      <ssnode id="ID1435909326"
+      <ssnode id="ID1435894242"
               number="6"
               predecessors="1"
               successors="1">
-        <posattr x="-267.000000"
-                 y="231.000000"/>
+        <posattr x="-158.000000"
+                 y="54.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>6 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;A&quot;,5,3),(&quot;B&quot;,4,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;A&quot;,5,3),(&quot;B&quot;,4,2)]
@@ -9162,30 +9114,29 @@ Production&apos;Eng_res_dept2 1: 5`Engineer
 Production&apos;Eng_res_dept3 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;A&quot;,5,3),(&quot;B&quot;,4,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;A&quot;,5,3),(&quot;B&quot;,4,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
       </ssnode>
-      <ssnode id="ID1435909853"
+      <ssnode id="ID1435895645"
               number="9"
               predecessors="1"
               successors="0">
-        <posattr x="-184.000000"
-                 y="315.000000"/>
+        <posattr x="-113.000000"
+                 y="106.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>9 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;A&quot;,5,3),(&quot;C&quot;,5,2),(&quot;B&quot;,4,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;A&quot;,5,3),(&quot;C&quot;,5,2),(&quot;B&quot;,4,2)]
@@ -9225,30 +9176,29 @@ Production&apos;Eng_res_dept2 1: 5`Engineer
 Production&apos;Eng_res_dept3 1: 2`Engineer
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;A&quot;,5,3),(&quot;C&quot;,5,2),(&quot;B&quot;,4,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;A&quot;,5,3),(&quot;C&quot;,5,2),(&quot;B&quot;,4,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
       </ssnode>
-      <ssnode id="ID1435910125"
+      <ssnode id="ID1435896121"
               number="8"
               predecessors="1"
               successors="0">
-        <posattr x="-186.000000"
-                 y="231.000000"/>
+        <posattr x="-77.000000"
+                 y="54.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>8 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&quot;B&quot;,4,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&quot;B&quot;,4,2)]
@@ -9288,8 +9238,7 @@ Production&apos;Eng_res_dept2 1: 5`Engineer
 Production&apos;Eng_res_dept3 1: 2`Engineer
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&quot;B&quot;,4,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&quot;B&quot;,4,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9555,8 +9504,8 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1412745586"
-                    panx="-348.000000"
-                    pany="203.375000"
+                    panx="-350.000000"
+                    pany="204.375000"
                     zoom="1.000000"
                     instance="ID2149">
             <zorder>
@@ -9573,8 +9522,8 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1434079395"
-                    panx="21.000000"
-                    pany="-414.000000"
+                    panx="3.000000"
+                    pany="-387.000000"
                     zoom="1.000000"
                     instance="ID1434067369">
             <zorder>
@@ -9582,8 +9531,8 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1434080163"
-                    panx="24.000000"
-                    pany="-405.000000"
+                    panx="64.000000"
+                    pany="-431.000000"
                     zoom="1.000000"
                     instance="ID1434069588">
             <zorder>
@@ -9618,8 +9567,8 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1435891470"
-                    panx="88.000000"
-                    pany="215.000000"
+                    panx="116.000000"
+                    pany="-10.000000"
                     zoom="1.000000"
                     instance="ID1435890590">
             <zorder>
@@ -9628,15 +9577,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
           </cpnsheet>
         </sheets>
         <zorder>
-          <position value="6"/>
-          <position value="0"/>
-          <position value="7"/>
-          <position value="1"/>
           <position value="2"/>
-          <position value="3"/>
           <position value="4"/>
           <position value="5"/>
+          <position value="6"/>
+          <position value="3"/>
+          <position value="7"/>
           <position value="8"/>
+          <position value="0"/>
+          <position value="1"/>
         </zorder>
       </cpnbinder>
     </binders>
@@ -9699,10 +9648,8 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
           </IndexNode>
         </IndexNode>
       </IndexNode>
+      <IndexNode expanded="false"/>
       <IndexNode expanded="false">
-        <IndexNode expanded="false"/>
-      </IndexNode>
-      <IndexNode expanded="true">
         <IndexNode expanded="false">
           <IndexNode expanded="true"/>
           <IndexNode expanded="true"/>
@@ -9728,7 +9675,6 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
         <IndexNode expanded="false"/>
         <IndexNode expanded="false"/>
         <IndexNode expanded="false"/>
-        <IndexNode expanded="true"/>
         <IndexNode expanded="false"/>
         <IndexNode expanded="false"/>
         <IndexNode expanded="false"/>
@@ -9741,7 +9687,8 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;C&quot;,5,2),(&quot;A&quot;,5,3),(&
         <IndexNode expanded="false"/>
         <IndexNode expanded="false"/>
         <IndexNode expanded="false"/>
-        <IndexNode expanded="true"/>
+        <IndexNode expanded="false"/>
+        <IndexNode expanded="false"/>
         <IndexNode expanded="true"/>
         <IndexNode expanded="true"/>
         <IndexNode expanded="true"/>

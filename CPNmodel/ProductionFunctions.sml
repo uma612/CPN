@@ -98,7 +98,7 @@ if(inorder= #1 (hd(orderlist))) then
 #2 (hd(orderlist))
 else DetermineListParts(inorder, tl(orderlist));
 
-fun AllOrders () = 1`(Order(1),[Part(1)])++
+fun OrderAll () = 1`(Order(1),[Part(1)])++
 1`(Order(2),[Part(1),Part(2)]);
 
 fun AllParts () = 1`(Part(1),[("A",5,3),("B",4,2),("C",5,2)])++
