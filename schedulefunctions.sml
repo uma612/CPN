@@ -132,9 +132,12 @@ end;
 val paths=validpaths(1);
 val sch = !allschedules;
 val allschedules = List.length(!allschedules);	
-			
+(*			
 !sleepstate;
 !currentss;
+!currentpath;*)
+!validpath;
+
 
 
 

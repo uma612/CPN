@@ -50,6 +50,11 @@ else if n="D" then
 else 
 [("",n, NoConstraint)];
 
+
+
+
+
+
 fun DetermineTasks (n)= 
 if n < 5 then
 [("A",5,3),("B",5,2),("C",10,1),("D",10,1)]
@@ -90,20 +95,20 @@ List.filter (fn t=> #1 t="A" orelse #1 t="D") t;
 fun CheckDepartmentB (t:Tasks) = 
 List.filter (fn t=> #1 t="B") t;
 
-fun CheckDepartmentC (t:Tasks) = 
-List.filter (fn t=> #1 t="C") t;
+fun CheckDepartmentCE (t:Tasks) = 
+List.filter (fn t=> #1 t="C" orelse #1 t="E") t;
 
 fun DetermineListParts(inorder,orderlist:OrderParts)=
 if(inorder= #1 (hd(orderlist))) then
 #2 (hd(orderlist))
 else DetermineListParts(inorder, tl(orderlist));
 
-fun AllOrders () = 1`(Order(1),[Part(1)])++
+fun AllOrders () = 1`(Order(1),[Part(1),Part(3)])++
 1`(Order(2),[Part(1),Part(2)]);
 
 fun AllParts () = 1`(Part(1),[("A",5,3),("B",4,2),("C",5,2)])++
 1`(Part(2),[("C",5,2),("A",5,3)])++
-1`(Part(3),[("A",5,3)]);
+1`(Part(3),[("E",6,3)]);
 
 
 

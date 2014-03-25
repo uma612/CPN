@@ -1,0 +1,200 @@
+CPN Tools state space report for:
+//hallingskeid.uib.no/ube072/Settings/Desktop/GitHub/CPN/#ProductionPlanningv14.5.cpn
+Report generated: Wed Mar 19 18:12:23 2014
+
+
+ Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  62
+     Arcs:   117
+     Secs:   0
+     Status: Full
+
+  Scc Graph
+     Nodes:  62
+     Arcs:   117
+     Secs:   0
+
+
+ Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     Department'Execute 1    1          0
+     Department'Execute 2    1          0
+     Department'Execute 3    1          0
+     Department'Task 1       1          0
+     Department'Task 2       1          0
+     Department'Task 3       2          0
+     Department'Task_Constraints 1
+                             1          0
+     Department'Task_Constraints 2
+                             1          0
+     Department'Task_Constraints 3
+                             2          0
+     Production'Department1_Tasks 1
+                             1          0
+     Production'Department2_Tasks 1
+                             1          0
+     Production'Determine3_Tasks 1
+                             2          0
+     Production'Eng_res_dept1 1
+                             4          1
+     Production'Eng_res_dept2 1
+                             5          3
+     Production'Eng_res_dept3 1
+                             3          0
+     Production'Executing_Tasks 1
+                             1          1
+     ProductionPlanning'Init 1
+                             1          0
+     ProductionPlanning'Order 1
+                             1          0
+     ProductionPlanning'Order_Received 1
+                             1          0
+     ProductionPlanning'Part 1
+                             1          0
+     ProductionSystem'Completed 1
+                             1          1
+     ProductionSystem'Start 1
+                             1          0
+     ProductionSystem'Tasks_Determined 1
+                             1          0
+
+  Best Upper Multi-set Bounds
+     Department'Execute 1
+                         1`("A",5,3)
+     Department'Execute 2
+                         1`("B",4,2)
+     Department'Execute 3
+                         1`("C",5,2)++
+1`("E",6,3)
+     Department'Task 1   1`("A",5,3)
+     Department'Task 2   1`("B",4,2)
+     Department'Task 3   1`("C",5,2)++
+1`("E",6,3)
+     Department'Task_Constraints 1
+                         1`[("","A",NoConstraint)]
+     Department'Task_Constraints 2
+                         1`[("A","B",InProcess),("C","B",InProcess)]
+     Department'Task_Constraints 3
+                         1`[("","E",NoConstraint)]++
+1`[("A","C",InProcess)]
+     Production'Department1_Tasks 1
+                         1`("A",5,3)
+     Production'Department2_Tasks 1
+                         1`("B",4,2)
+     Production'Determine3_Tasks 1
+                         1`("C",5,2)++
+1`("E",6,3)
+     Production'Eng_res_dept1 1
+                         4`Engineer
+     Production'Eng_res_dept2 1
+                         5`Engineer
+     Production'Eng_res_dept3 1
+                         3`Engineer
+     Production'Executing_Tasks 1
+                         1`[]++
+1`[("A",5,3)]++
+1`[("A",5,3),("E",6,3)]++
+1`[("B",4,2),("C",5,2),("A",5,3)]++
+1`[("C",5,2)]++
+1`[("C",5,2),("A",5,3)]++
+1`[("E",6,3)]++
+1`[("E",6,3),("A",5,3)]
+     ProductionPlanning'Init 1
+                         1`()
+     ProductionPlanning'Order 1
+                         1`[(Order(1),[Part(1),Part(3)]),(Order(2),[Part(1),Part(2)])]
+     ProductionPlanning'Order_Received 1
+                         1`[Part(1),Part(3)]
+     ProductionPlanning'Part 1
+                         1`[(Part(1),[("A",5,3),("B",4,2),("C",5,2)]),(Part(2),[("C",5,2),("A",5,3)]),(Part(3),[("E",6,3)])]
+     ProductionSystem'Completed 1
+                         1`[]++
+1`[("A",5,3)]++
+1`[("A",5,3),("B",4,2)]++
+1`[("A",5,3),("C",5,2),("B",4,2)]++
+1`[("B",4,2)]++
+1`[("C",5,2),("A",5,3),("B",4,2)]++
+1`[("C",5,2),("B",4,2)]++
+1`[("E",6,3),("A",5,3)]++
+1`[("E",6,3),("A",5,3),("C",5,2),("B",4,2)]++
+1`[("E",6,3),("C",5,2),("A",5,3),("B",4,2)]
+     ProductionSystem'Start 1
+                         1`Order(1)
+     ProductionSystem'Tasks_Determined 1
+                         1`[("A",5,3),("B",4,2),("C",5,2),("E",6,3)]
+
+  Best Lower Multi-set Bounds
+     Department'Execute 1
+                         empty
+     Department'Execute 2
+                         empty
+     Department'Execute 3
+                         empty
+     Department'Task 1   empty
+     Department'Task 2   empty
+     Department'Task 3   empty
+     Department'Task_Constraints 1
+                         empty
+     Department'Task_Constraints 2
+                         empty
+     Department'Task_Constraints 3
+                         empty
+     Production'Department1_Tasks 1
+                         empty
+     Production'Department2_Tasks 1
+                         empty
+     Production'Determine3_Tasks 1
+                         empty
+     Production'Eng_res_dept1 1
+                         1`Engineer
+     Production'Eng_res_dept2 1
+                         3`Engineer
+     Production'Eng_res_dept3 1
+                         empty
+     Production'Executing_Tasks 1
+                         empty
+     ProductionPlanning'Init 1
+                         empty
+     ProductionPlanning'Order 1
+                         empty
+     ProductionPlanning'Order_Received 1
+                         empty
+     ProductionPlanning'Part 1
+                         empty
+     ProductionSystem'Completed 1
+                         empty
+     ProductionSystem'Start 1
+                         empty
+     ProductionSystem'Tasks_Determined 1
+                         empty
+
+
+ Home Properties
+------------------------------------------------------------------------
+
+  Home Markings
+     Initial Marking is not a home marking
+
+
+ Liveness Properties
+------------------------------------------------------------------------
+
+  Dead Markings
+     [55,61,62]
+
+  Dead Transition Instances
+     None
+
+  Live Transition Instances
+     None
+
+
+ Fairness Properties
+------------------------------------------------------------------------
+     No infinite occurrence sequences.
