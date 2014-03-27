@@ -2,15 +2,15 @@ val dm = ListDeadMarkings ();
 
 val tms=Mark.Department'Task 1 1 +++
 Mark.Department'Task 2 1 +++
-Mark.Department'Task 3  1;
+Mark.Department'Task 3 1;
 val ms=TMS.ms tms;
 
 
 
-fun checkValidMarking(ms,dm)=List.map(valid(ms)) dm 
+fun checkValidMarking(ms,dm)=List.map(valid(ms)) dm
 
 and valid(ms) dm=
-let 
+let
 val completedtasks=Mark.ProductionSystem'Completed 1 dm;
 
 val node=dm
@@ -29,4 +29,3 @@ end;
 
 val validmarkings=checkValidMarking(ms,dm);
 val validdeadmarkings=List.filter(fn t=> t<>0)validmarkings;
-
