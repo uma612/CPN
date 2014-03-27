@@ -2436,8 +2436,8 @@ Received</text>
         </port>
       </place>
       <place id="ID1434949097">
-        <posattr x="588.000000"
-                 y="296.000000"/>
+        <posattr x="637.000000"
+                 y="230.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -2459,8 +2459,8 @@ Received</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1434949098">
-          <posattr x="619.000000"
-                   y="279.000000"/>
+          <posattr x="668.000000"
+                   y="213.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2473,8 +2473,8 @@ Received</text>
                 version="3.4.0">UNIT</text>
         </type>
         <initmark id="ID1434949099">
-          <posattr x="609.000000"
-                   y="312.000000"/>
+          <posattr x="658.000000"
+                   y="246.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2665,8 +2665,8 @@ Received</text>
       </trans>
       <trans id="ID1434946724"
              explicit="false">
-        <posattr x="439.000000"
-                 y="296.000000"/>
+        <posattr x="515.000000"
+                 y="230.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -2681,8 +2681,8 @@ Received</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1434946725">
-          <posattr x="415.000000"
-                   y="317.000000"/>
+          <posattr x="491.000000"
+                   y="251.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2695,8 +2695,8 @@ Received</text>
                 version="3.4.0"/>
         </cond>
         <time id="ID1434946726">
-          <posattr x="468.500000"
-                   y="317.000000"/>
+          <posattr x="544.500000"
+                   y="251.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2709,8 +2709,8 @@ Received</text>
                 version="3.4.0"/>
         </time>
         <code id="ID1434946727">
-          <posattr x="488.500000"
-                   y="254.000000"/>
+          <posattr x="564.500000"
+                   y="188.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2723,8 +2723,8 @@ Received</text>
                 version="3.4.0"/>
         </code>
         <channel id="ID1434946728">
-          <posattr x="487.500000"
-                   y="296.000000"/>
+          <posattr x="563.500000"
+                   y="230.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2737,8 +2737,8 @@ Received</text>
                 version="3.4.0"/>
         </channel>
         <priority id="ID1434946729">
-          <posattr x="386.000000"
-                   y="289.000000"/>
+          <posattr x="462.000000"
+                   y="223.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2960,8 +2960,21 @@ Received</text>
                    currentcyckle="2"/>
         <transend idref="ID1434946724"/>
         <placeend idref="ID1414702309"/>
+        <bendpoint id="ID1436093822"
+                   serial="1">
+          <posattr x="515.000000"
+                   y="296.000000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
         <annot id="ID1434947311">
-          <posattr x="386.000000"
+          <posattr x="489.000000"
                    y="307.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2972,7 +2985,7 @@ Received</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="3.4.0">AllOrders ()</text>
+                version="3.4.0">getCurrentOrder ()</text>
         </annot>
       </arc>
       <arc id="ID1434950361"
@@ -2993,8 +3006,8 @@ Received</text>
         <transend idref="ID1434946724"/>
         <placeend idref="ID1434949097"/>
         <annot id="ID1434950362">
-          <posattr x="502.000000"
-                   y="307.000000"/>
+          <posattr x="567.000000"
+                   y="241.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3024,9 +3037,22 @@ Received</text>
                    currentcyckle="2"/>
         <transend idref="ID1434946724"/>
         <placeend idref="ID1433934103"/>
+        <bendpoint id="ID1436093864"
+                   serial="1">
+          <posattr x="515.000000"
+                   y="100.375000"/>
+          <fillattr colour="White"
+                    pattern="Solid"
+                    filled="false"/>
+          <lineattr colour="Black"
+                    thick="0"
+                    type="Solid"/>
+          <textattr colour="Black"
+                    bold="false"/>
+        </bendpoint>
         <annot id="ID1434953375">
-          <posattr x="312.500000"
-                   y="216.000000"/>
+          <posattr x="470.000000"
+                   y="154.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3036,7 +3062,7 @@ Received</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="3.4.0">AllParts ()</text>
+                version="3.4.0">getAllParts ()</text>
         </annot>
       </arc>
       <Aux id="ID1431424211">
@@ -3097,6 +3123,36 @@ List.all (DetermineListofTasks (partlist)) tasklist;</text>
         <label/>
         <text>Init</text>
       </Aux>
+      <Aux id="ID1436094116">
+        <posattr x="133.000000"
+                 y="545.375000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>SetCurrentOrder order1</text>
+      </Aux>
+      <Aux id="ID1436095120">
+        <posattr x="384.000000"
+                 y="553.375000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>val currentorder = ref order1
+fun getCurrentOrder () = (!currentorder)
+fun setCurrentOrder order = (currentorder := order);</text>
+      </Aux>
     </page>
     <page id="ID1433971948">
       <pageattr name="Production"/>
@@ -3111,7 +3167,7 @@ List.all (DetermineListofTasks (partlist)) tasklist;</text>
                   type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
-        <text>Department1 Tasks</text>
+        <text>System Tasks</text>
         <ellipse w="154.000000"
                  h="40.000000"/>
         <token x="-10.000000"
@@ -3163,7 +3219,7 @@ List.all (DetermineListofTasks (partlist)) tasklist;</text>
                   type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
-        <text>Department2 Tasks</text>
+        <text>Engine Tasks</text>
         <ellipse w="154.000000"
                  h="40.000000"/>
         <token x="-10.000000"
@@ -3215,7 +3271,7 @@ List.all (DetermineListofTasks (partlist)) tasklist;</text>
                   type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
-        <text>Determine3 Tasks</text>
+        <text>Documentation Tasks</text>
         <ellipse w="146.000000"
                  h="40.000000"/>
         <token x="-10.000000"
@@ -3658,7 +3714,7 @@ assigned</text>
                   type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
-        <text>Engineer</text>
+        <text>Engine</text>
         <ellipse w="102.000000"
                  h="40.000000"/>
         <token x="-10.000000"
@@ -6885,48 +6941,11 @@ Constraints</text>
         <textattr colour="Black"
                   bold="false"/>
         <label/>
-        <text>Mark.ProductionSystem&apos;Completed 18926</text>
-      </Aux>
-      <Aux id="ID1436065868">
-        <posattr x="-552.000000"
-                 y="-143.000000"/>
-        <fillattr colour="White"
-                  pattern=""
-                  filled="false"/>
-        <lineattr colour="Black"
-                  thick="1"
-                  type="Solid"/>
-        <textattr colour="Black"
-                  bold="false"/>
-        <label/>
-        <text>fun SystemTasks (systemlist:Tasknamelist) (task:Task)=
-if ((hd (systemlist))= #1 task) then 
-task
-else 
-SystemTasks(tl(systemlist)) task;</text>
-      </Aux>
-      <Aux id="ID1436065905">
-        <posattr x="-548.000000"
-                 y="-250.000000"/>
-        <fillattr colour="White"
-                  pattern=""
-                  filled="false"/>
-        <lineattr colour="Black"
-                  thick="1"
-                  type="Solid"/>
-        <textattr colour="Black"
-                  bold="false"/>
-        <label/>
-        <text>fun CheckDepartmentSystem (t:Tasks) = 
-let
-val st=getst()
-in
-List.map (SystemTasks (st)) t
-end;</text>
+        <text>Mark.ProductionSystem&apos;Completed 1 30715</text>
       </Aux>
       <Aux id="ID1436065982">
-        <posattr x="-558.000000"
-                 y="-105.000000"/>
+        <posattr x="-588.000000"
+                 y="89.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -6939,8 +6958,119 @@ end;</text>
         <text>fun getst()=[(&quot;1&quot;),(&quot;2&quot;),(&quot;6&quot;),(&quot;13&quot;),(&quot;18&quot;),(&quot;25&quot;),(&quot;26&quot;),(&quot;35&quot;)];</text>
       </Aux>
       <Aux id="ID1436066138">
-        <posattr x="-543.000000"
-                 y="-420.000000"/>
+        <posattr x="-516.000000"
+                 y="-375.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>fun CheckDepartmentSystem(tasks:Tasks)=
+let
+val its=CheckDepartment (tasks)
+in
+List.filter(fn t =&gt;t &lt;&gt; (&quot;&quot;,0,0))its
+end;</text>
+      </Aux>
+      <Aux id="ID1436066655">
+        <posattr x="-156.000000"
+                 y="-307.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>val tasks= [(&quot;4&quot;,5,2),(&quot;5&quot;,5,3),(&quot;6&quot;,5,3)];</text>
+      </Aux>
+      <Aux id="ID1436065868">
+        <posattr x="-559.000000"
+                 y="-34.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>fun SystemTasksss (st:Tasknamelist) (task:Task)=
+List.find(fn t =&gt; t = (#1 task)) st</text>
+      </Aux>
+      <Aux id="ID1436065905">
+        <posattr x="-565.000000"
+                 y="-206.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>fun CheckDepartment (tasks:Tasks) = 
+List.map (SystemTasks (getst())) tasks</text>
+      </Aux>
+      <Aux id="ID1436085350">
+        <posattr x="9.000000"
+                 y="-30.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>fun SystemTasks (systemlist:Tasknamelist) (task:Task)=
+if (systemlist&lt;&gt;[]) then
+if ((hd (systemlist))= #1 task) then 
+task
+else 
+SystemTasks(tl(systemlist)) task
+else (&quot;&quot;,0,0);</text>
+      </Aux>
+      <Aux id="ID1436086357">
+        <posattr x="-603.000000"
+                 y="-298.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>val tas= List.filter (fn t =&gt; t&lt;&gt;(&quot;&quot;,0,0)) its;</text>
+      </Aux>
+      <Aux id="ID1436089279">
+        <posattr x="-542.000000"
+                 y="-267.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>val its=CheckDepartment (tasks)</text>
+      </Aux>
+      <Aux id="ID1436090134">
+        <posattr x="-120.000000"
+                 y="-418.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -6952,9 +7082,9 @@ end;</text>
         <label/>
         <text>CheckDepartmentSystem(tasks)</text>
       </Aux>
-      <Aux id="ID1436066655">
-        <posattr x="-394.000000"
-                 y="-375.000000"/>
+      <Aux id="ID1436091917">
+        <posattr x="-527.000000"
+                 y="-782.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -6964,7 +7094,92 @@ end;</text>
         <textattr colour="Black"
                   bold="false"/>
         <label/>
-        <text>val tasks= [(&quot;4&quot;,5,2),(&quot;5&quot;,5,3),(&quot;6&quot;,5,3)];</text>
+        <text>val dm = ListDeadMarkings ();</text>
+      </Aux>
+      <Aux id="ID1436091990">
+        <posattr x="-191.000000"
+                 y="-778.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>val tms=Mark.Department&apos;Task 1 1 +++
+Mark.Department&apos;Task 2 1 +++
+Mark.Department&apos;Task 3 1;
+val ms=TMS.ms tms;</text>
+      </Aux>
+      <Aux id="ID1436092075">
+        <posattr x="-331.000000"
+                 y="-587.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>fun checkValidMarking(ms,dm)=List.map(valid(ms)) dm</text>
+      </Aux>
+      <Aux id="ID1436092172">
+        <posattr x="-589.000000"
+                 y="-604.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>fun valid(ms) dm=
+let
+val completedtasks=Mark.ProductionSystem&apos;Completed 1 dm;
+
+val node=dm
+in
+if (ms&lt;&gt;[] andalso completedtasks&lt;&gt;[]) then
+  if length(ms)=length(hd(completedtasks)) then
+    (print (&quot;node&quot; ^ (Int.toString node) ^&quot;\n&quot;);
+     node)
+  else (0)
+else (0)
+end;</text>
+      </Aux>
+      <Aux id="ID1436092281">
+        <posattr x="-414.000000"
+                 y="-999.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>val validmarkings=checkValidMarking(ms,dm);</text>
+      </Aux>
+      <Aux id="ID1436092540">
+        <posattr x="-617.000000"
+                 y="-961.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>val completedtasks=Mark.ProductionSystem&apos;Completed 1 dm;</text>
       </Aux>
       <ssarc id="ID1436060101"
              order="1"
@@ -7794,8 +8009,8 @@ ProductionSystem&apos;Completed 1: 1`[]</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1433971955"
-                    panx="69.000000"
-                    pany="-90.000000"
+                    panx="119.000000"
+                    pany="-99.000000"
                     zoom="1.000000"
                     instance="ID1433971950">
             <zorder>
@@ -7830,8 +8045,8 @@ ProductionSystem&apos;Completed 1: 1`[]</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1435854086"
-                    panx="16.000000"
-                    pany="-152.000000"
+                    panx="96.000000"
+                    pany="-725.000000"
                     zoom="1.000000"
                     instance="ID1435853710">
             <zorder>
@@ -7841,10 +8056,10 @@ ProductionSystem&apos;Completed 1: 1`[]</text>
         </sheets>
         <zorder>
           <position value="0"/>
-          <position value="3"/>
-          <position value="6"/>
           <position value="4"/>
           <position value="5"/>
+          <position value="6"/>
+          <position value="3"/>
           <position value="2"/>
           <position value="1"/>
         </zorder>
@@ -7909,9 +8124,7 @@ ProductionSystem&apos;Completed 1: 1`[]</text>
           </IndexNode>
         </IndexNode>
       </IndexNode>
-      <IndexNode expanded="false">
-        <IndexNode expanded="false"/>
-      </IndexNode>
+      <IndexNode expanded="false"/>
       <IndexNode expanded="true">
         <IndexNode expanded="false">
           <IndexNode expanded="true"/>
