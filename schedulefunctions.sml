@@ -11,9 +11,11 @@ val validmarkings= checkValidMarking(dm);
 
 *)
 
-
-val schedule: (time * (string * TaskName) option) list ref =ref[];
-val allschedules:  (time * (string * TaskName) option) list list ref =ref[];
+val test=[];
+(* val schedule: (time * (string * TaskName) option) list ref =ref[];
+val allschedules:  (time * (string * TaskName) option) list list ref =ref[]; *)
+val schedule: (time * (string * TaskName)) list ref =ref[];
+val allschedules:  (time * (string * TaskName)) list list ref =ref[];
 val validpath :Node list list ref=ref[];
 val currentpath :Node list ref=ref[1];
 open TI;
@@ -22,7 +24,7 @@ val currentss: (Node*TransInst list) list ref=ref[];
 
 fun findAllArcs(n) = OutArcs(n);
 
-fun maparc arc = 
+(* fun maparc arc = 
 	let
  		val binding = ArcToBE arc
 	in
@@ -30,9 +32,17 @@ fun maparc arc =
  		Bind.Department'Start_Task (_,{task,...}) => SOME("start",#1 task)
 	      | Bind.Department'Completed (_,{task,...}) => SOME("stop",#1 task)
  	      | _ => NONE
-	end;
-
-fun checkSleepState(arc) =
+	end; *)
+fun maparc arc = 
+let
+ val binding = ArcToBE arc
+in
+ case binding of
+ Bind.Department'Start_Task (_,{task,...}) => ("starts",#1 task)
+      | Bind.Department'Completed (_,{task,...}) => ("stops",#1 task)
+       | _ => ("","")
+end;
+ fun checkSleepState(arc) =
 let 
    val binding = ArcToBE arc
 in
@@ -40,7 +50,7 @@ case binding of
         Bind.Department'Start_Task (_,{task,...}) => "False"
       | Bind.Department'Completed (_,{task,...}) => "True"
        | _ => "False"
-end;
+end; 
 
 
 fun validpaths(node) =
@@ -83,26 +93,29 @@ and addNodeToPath(node,check) : unit =
 	if check=true then
 	   (
 		currentpath:=(node)::(!currentpath);
-		currentss:=(node,(!sleepstate))::(!currentss);
+		 currentss:=(node,(!sleepstate))::(!currentss);
 	   	validpath:=((!currentpath)::(!validpath));
 		print ("hd(tl)"^(Int.toString (hd(tl(!currentpath))))^"\n");
             	getSchedule(hd(tl(!currentpath)),node);
             	allschedules:=((!schedule)::(!allschedules));
 		schedule:=List.tl(!schedule);
+		
 		currentpath := List.tl (!currentpath)
            )
         else
 	    (
 		currentpath:=(node)::(!currentpath);
            	currentss:=(node,(!sleepstate))::(!currentss);
-             	print ("after adding node" ^ (Int.toString node) ^ "\n");
-             	print ("hd(tl)"^(Int.toString (hd(tl(!currentpath))))^"\n");
+             	(*print ("after adding node" ^ (Int.toString node) ^ "\n");
+             	print ("hd(tl)"^(Int.toString (hd(tl(!currentpath))))^"\n");*)
              	getSchedule(hd(tl(!currentpath)),node); 
-             	print ("after getting schedule" ^ (Int.toString node)^"\n");
+             	(*print ("after getting schedule" ^ (Int.toString node)^"\n");*)
              	validpaths(node);
+				
              	schedule:=List.tl(!schedule);
-             	currentpath := List.tl (!currentpath);
-	     	print ("after taking the tail of currentpath")
+				
+             	currentpath := List.tl (!currentpath)
+	     	(*print ("after taking the tail of currentpath")*)
              )
 
 and checkvalidnode(node,validdeadmarkings)=
@@ -130,20 +143,36 @@ end;
 
 
 val paths=validpaths(1);
+
 val sch = !allschedules;
 val allschedules = List.length(!allschedules);	
 (*			
 !sleepstate;
 !currentss;
-!currentpath;*)
-!validpath;
+!currentpath;
+!validpath;*)
 
 
 
+(* Result output file *)
 
+fun scheduletoStr sch = 
+let 
+val sch=List.rev(sch)
+in
+String.concat (List.map (fn (t,(str:string,tname:TaskName))=> "Task ["^tname^"] "^str^" at "^(ModelTime.toString (t))^",\n")sch)
+end;
 
+fun dumpSchedule sch = 
+let
+val sch=List.rev(sch);
+ val outfile = TextIO.openOut("//hallingskeid.uib.no/ube072/Settings/Desktop/GitHub/CPN/Results/TimeSchedules/order4report4.txt");
+ val _ = List.app (fn sch => TextIO.output (outfile,(scheduletoStr sch)^"\n-----\n")) sch
+in
+TextIO.closeOut outfile
+end;
 
-
+dumpSchedule (sch);
 
 
 

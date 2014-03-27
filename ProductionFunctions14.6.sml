@@ -31,18 +31,20 @@ if  #2 (hd(c))=n then
 else DetermineConstraints(n,tl(c))
 else [("",n, NoConstraint)];
 
-fun AllconstraintsSystem()=[("2","13", Before),("10","13", Before),("13","18", Before),
-	                    ("24","25", Before),("25","26", InProcess),("26","35", Before)];
+(* fun DetermineConstraints (n,c:Constraints)=
+List.filter(fn FilterConstraints=>FilterConstraints<>("",n, NoConstraint)); *)
 
-fun AllconstraintsEngine()=[("1","3", Before),("1","4", Before),("1","7", Before),
-                            ("7","8", Before),("8","9", InProcess),("10","11", Before),
-                            ("8","12", Before),("12","14", InProcess),("14","15", Before),
-                            ("15","16", InProcess),("11","17", Before),
-			    ("20","21", InProcess),("19","22", Before),("21","23", Before),
+fun AllconstraintsSystem()=[("1","2",InProcess),("2","13", Before),("10","13", Before), ("23","10", InProcess),
+	                    ("24","25", Before),("25","26", InProcess),("26","35", Before),("9","18", InProcess),("8","18", Before)];
+
+fun AllconstraintsEngine()=[("1","3", Before),("1","4", Before),
+                            ("7","8", Before),("8","9", InProcess),("20","12", Before),
+                            ("10","12", Before),("12","14", InProcess),("14","15", Before),
+                            ("15","16", InProcess),("19","22", Before),("20","11", InProcess),
                             ("12","21", InProcess)];
 
-fun AllconstraintsDovumentation()=[("1","5", Before),("7","10", Before),("14","19", Before),
-				   ("24","28", Before),("25","30", InProcess),("24","32", Before),
+fun AllconstraintsDovumentation()=[("1","5", Before),("14","19", Before),
+				   ("24","28", Before),("25","30", InProcess),("24","32", Before),("21","23", Before),
 		                   ("26","34", Before)];
 
 
@@ -66,7 +68,7 @@ List.concat (List.map (DetermineListofTasks (partlist)) tasklist);
 
 (* Determine departments *)
 
-fun getst()=[("1"),("2"),("6"),("13"),("18"),("25"),("26"),("35")];
+fun getst()=[("1"),("2"),("6"),("13"),("18"),("25"),("26"),("35"),("10")];
 
 fun SystemTasks (systemlist:Tasknamelist) (task:Task)=
 if (systemlist<>[]) then
@@ -88,7 +90,7 @@ end;
 
 
 
-fun getet()=[("3"),("4"),("7"),("8"),("9"),("11"),("12"),("14"),("15"),("16"),("17"),("20"),("21"),("22"),("23"),("24"),("33")];
+fun getet()=[("3"),("4"),("7"),("8"),("9"),("11"),("12"),("14"),("15"),("16"),("17"),("20"),("21"),("22"),("24"),("33")];
 
 fun DepartmentEngine (tasks:Tasks) = 
 List.map (SystemTasks (getet())) tasks;
@@ -100,7 +102,7 @@ in
 List.filter(fn t =>t <> ("",0,0))its
 end;
 
-fun getdt()=[("5"),("10"),("19"),("27"),("28"),("29"),("30"),("31"),("32"),("34")];
+fun getdt()=[("5"),("19"),("23"),("27"),("28"),("29"),("30"),("31"),("32"),("34")];
 
 fun DepartmentDocs (tasks:Tasks) =
 List.map (SystemTasks (getdt())) tasks;
@@ -126,17 +128,25 @@ val order2 = Order(2)
 val order3 = Order(3)
 val order4 = Order(4)
 val order5 = Order(5)
+val order6 = Order(6)
+val order7 = Order(7)
+val order8 = Order(8)
+val order9 = Order(9)
+val order10 = Order(10)
 
 
 val currentorder = ref order1
 fun getCurrentOrder () = (!currentorder)
 fun setCurrentOrder order = (currentorder := order);
 
-fun AllOrders () = 1`(Order(1),[Part(1),Part(2),Part(3),Part(4),Part(5),Part(6)])++
-1`(Order(2),[Part(1),Part(2)])++
-1`(Order(3),)++
-1`(Order(4),[Part(1),Part(11)])++
-1`(Order(5),[Part(12),Part(13)]);
+fun AllOrders () = 1`(Order(1),[Part(1)])++
+1`(Order(2),[Part(1),Part(11)])++
+1`(Order(3),[Part(3),Part(8)])++
+1`(Order(4),[Part(4),Part(5),Part(10)])++
+1`(Order(5),[Part(13),Part(14),Part(15)])++
+1`(Order(6),[Part(12),Part(13)])++
+1`(Order(7),[Part(2),Part(6),Part(9),Part(14),Part(11)])++
+1`(Order(8),[Part(1),Part(3),Part(7),Part(15)]);
 
 (* Mapping of parts to tasks *)
 
