@@ -1,0 +1,90 @@
+Task [1] starts at 0,
+Task [2] starts at 0,
+Task [24] starts at 0,
+Task [2] stops at 4,
+Task [1] stops at 5,
+Task [24] stops at 5,
+Task [3] starts at 5,
+Task [3] stops at 10,
+
+-----
+Task [1] starts at 0,
+Task [2] starts at 0,
+Task [24] starts at 0,
+Task [2] stops at 4,
+Task [1] stops at 5,
+Task [3] starts at 5,
+Task [24] stops at 5,
+Task [3] stops at 10,
+
+-----
+Task [1] starts at 0,
+Task [2] starts at 0,
+Task [24] starts at 0,
+Task [2] stops at 4,
+Task [24] stops at 5,
+Task [1] stops at 5,
+Task [3] starts at 5,
+Task [3] stops at 10,
+
+-----
+Task [1] starts at 0,
+Task [24] starts at 0,
+Task [2] starts at 0,
+Task [2] stops at 4,
+Task [1] stops at 5,
+Task [24] stops at 5,
+Task [3] starts at 5,
+Task [3] stops at 10,
+
+-----
+Task [1] starts at 0,
+Task [24] starts at 0,
+Task [2] starts at 0,
+Task [2] stops at 4,
+Task [1] stops at 5,
+Task [3] starts at 5,
+Task [24] stops at 5,
+Task [3] stops at 10,
+
+-----
+Task [1] starts at 0,
+Task [24] starts at 0,
+Task [2] starts at 0,
+Task [2] stops at 4,
+Task [24] stops at 5,
+Task [1] stops at 5,
+Task [3] starts at 5,
+Task [3] stops at 10,
+
+-----
+Task [24] starts at 0,
+Task [1] starts at 0,
+Task [2] starts at 0,
+Task [2] stops at 4,
+Task [1] stops at 5,
+Task [24] stops at 5,
+Task [3] starts at 5,
+Task [3] stops at 10,
+
+-----
+Task [24] starts at 0,
+Task [1] starts at 0,
+Task [2] starts at 0,
+Task [2] stops at 4,
+Task [1] stops at 5,
+Task [3] starts at 5,
+Task [24] stops at 5,
+Task [3] stops at 10,
+
+-----
+Task [24] starts at 0,
+Task [1] starts at 0,
+Task [2] starts at 0,
+Task [2] stops at 4,
+Task [24] stops at 5,
+Task [1] stops at 5,
+Task [3] starts at 5,
+Task [3] stops at 10,
+
+-----
