@@ -73,19 +73,14 @@ else [("",n, NoConstraint)];
 (* fun DetermineConstraints (n,c:Constraints)=
 List.filter(fn FilterConstraints=>FilterConstraints<>("",n, NoConstraint)); *)
 
-fun AllconstraintsSystem()=[("2","13", Before),("10","13", Before), ("23","10", InProcess),
-	                    ("24","25", Before),("25","26", InProcess),("26","35", Before),("9","18", InProcess),("8","18", Before)];
+fun AllconstraintsSystem()=[("1","3",Before),("4","6", InProcess),
+	                    ("25","26", InProcess),("9","18", InProcess)];
 
-fun AllconstraintsEngine()=[("1","4", Before),
-                            ("7","8", Before),("8","9", InProcess),("20","12", Before),
+fun AllconstraintsEngine()=[("7","8", Before),("8","9", InProcess),("20","12", Before),("13","22", Before),
                             ("10","12", Before),("12","14", InProcess),("14","15", Before),
-                            ("15","16", InProcess),("19","22", Before),("20","11", InProcess),
-                            ("12","21", InProcess)];
+                            ("15","16", InProcess)];
 
-fun AllconstraintsDovumentation()=[("1","5", Before),("14","19", Before),
-				   ("24","28", Before),("25","30", InProcess),("24","32", Before),("21","23", Before),
-		                   ("26","34", Before)];
-
+fun AllconstraintsDovumentation()=[("6","5", Before),("29","30", InProcess),("21","23", Before),("33","34", Before)];
 
 
 fun remove (task,ptasks) = List.filter (fn t => t<>task) ptasks;
@@ -192,18 +187,18 @@ fun AllOrders () = 1`(Order(1),[Part(1)])++
 fun getAllParts () = 1`(Part(1),[("1",6,4),("2",4,2),("3",3,2)])++
 1`(Part(2),[("4",5,2),("5",5,3),("6",5,3)])++
 1`(Part(3),[("7",5,2),("8",5,3),("9",5,3)])++
-1`(Part(4),[("10",5,2)])++
-1`(Part(5),[("11",5,2),("12",5,2),("20",5,3)])++
+1`(Part(4),[("10",10,5)])++
+1`(Part(5),[("11",10,2),("12",5,4),("20",12,3)])++
 1`(Part(6),[("13",5,2)])++
 1`(Part(7),[("14",5,2),("15",5,3),("16",5,3)])++
 1`(Part(8),[("17",5,3),("18",5,3)])++
 1`(Part(9),[("19",5,2),("22",5,3)])++
-1`(Part(10),[("21",5,3),("23",5,3)])++
+1`(Part(10),[("21",6,3),("23",5,3)])++
 1`(Part(11),[("24",5,3)])++
-1`(Part(12),[("25",5,2),("26",5,3),("27",5,3),("28",5,3)])++
-1`(Part(13),[("29",5,3),("30",5,3),("31",5,3),("32",5,3)])++
-1`(Part(14),[("33",6,3),("34",5,3)])++
-1`(Part(15),[("35",5,3)]);
+1`(Part(12),[("25",48,10),("26",22,11),("27",28,6),("28",12,3)])++
+1`(Part(13),[("29",20,6),("30",50,8),("31",25,3),("32",14,7)])++
+1`(Part(14),[("33",36,8),("34",54,5)])++
+1`(Part(15),[("35",42,10)]);
 
 (* Determine Departments
 fun CheckDepartmentSystem (t:Tasks) = 

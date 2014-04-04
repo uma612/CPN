@@ -1,0 +1,244 @@
+CPN Tools state space report for:
+//hallingskeid.uib.no/ube072/Settings/Desktop/GitHub/CPN/ProductionPlanningv14.8.cpn
+Report generated: Thu Apr  3 16:46:29 2014
+
+
+ Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  18
+     Arcs:   18
+     Secs:   0
+     Status: Full
+
+  Scc Graph
+     Nodes:  18
+     Arcs:   18
+     Secs:   0
+
+
+ Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     Department'Execute 1    0          0
+     Department'Execute 2    0          0
+     Department'Execute 3    2          0
+     Department'Task 1       0          0
+     Department'Task 2       0          0
+     Department'Task 3       3          0
+     Department'Task_Constraints 1
+                             0          0
+     Department'Task_Constraints 2
+                             0          0
+     Department'Task_Constraints 3
+                             3          0
+     Production'Docs 1       1          1
+     Production'Documentation_Tasks 1
+                             0          0
+     Production'Eng_res_dept1 1
+                             1          1
+     Production'Eng_res_dept2 1
+                             1          1
+     Production'Eng_res_dept3 1
+                             1          1
+     Production'Engine 1     1          1
+     Production'Engine_Tasks 1
+                             0          0
+     Production'Executing_Tasks 1
+                             1          1
+     Production'Init_Constraints 1
+                             0          0
+     Production'System 1     1          1
+     Production'System_Tasks 1
+                             0          0
+     ProductionPlanning'Init 1
+                             0          0
+     ProductionPlanning'Order 1
+                             1          1
+     ProductionPlanning'Order_Received 1
+                             0          0
+     ProductionPlanning'Orders 1
+                             0          0
+     ProductionPlanning'Part 1
+                             1          1
+     ProductionSystem'Completed 1
+                             1          1
+     ProductionSystem'Start 1
+                             0          0
+     ProductionSystem'Tasks_Determined 1
+                             0          0
+
+  Best Upper Multi-set Bounds
+     Department'Execute 1
+                         empty
+     Department'Execute 2
+                         empty
+     Department'Execute 3
+                         1`("1",6,3)++
+1`("1",6,4)++
+1`("2",4,1)++
+1`("2",4,2)++
+1`("3",3,2)
+     Department'Task 1   empty
+     Department'Task 2   empty
+     Department'Task 3   1`("1",6,4)++
+1`("2",4,2)++
+1`("3",3,2)
+     Department'Task_Constraints 1
+                         empty
+     Department'Task_Constraints 2
+                         empty
+     Department'Task_Constraints 3
+                         1`[("","1",NoConstraint)]++
+1`[("","2",NoConstraint)]++
+1`[("1","3",Before),("","3",NoConstraint)]
+     Production'Docs 1   1`[("1","5",Before),("14","19",Before),("24","28",Before),("25","30",InProcess),("24","32",Before),("21","23",Before),("26","34",Before)]
+     Production'Documentation_Tasks 1
+                         empty
+     Production'Eng_res_dept1 1
+                         1`0++
+1`1++
+1`2++
+1`3++
+1`4++
+1`5
+     Production'Eng_res_dept2 1
+                         1`6
+     Production'Eng_res_dept3 1
+                         1`4
+     Production'Engine 1 1`[("1","4",Before),("7","8",Before),("8","9",InProcess),("20","12",Before),("10","12",Before),("12","14",InProcess),("14","15",Before),("15","16",InProcess),("19","22",Before),("20","11",InProcess),("12","21",InProcess)]
+     Production'Engine_Tasks 1
+                         empty
+     Production'Executing_Tasks 1
+                         1`[]++
+1`[("1",6,3)]++
+1`[("1",6,3),("2",4,2)]++
+1`[("1",6,4)]++
+1`[("2",4,1)]++
+1`[("2",4,1),("1",6,4)]++
+1`[("2",4,2)]++
+1`[("3",3,2)]++
+1`[("3",3,2),("2",4,1)]++
+1`[("3",3,2),("2",4,2)]
+     Production'Init_Constraints 1
+                         empty
+     Production'System 1 1`[("1","3",Before),("2","13",Before),("10","13",Before),("23","10",InProcess),("24","25",Before),("25","26",InProcess),("26","35",Before),("9","18",InProcess),("8","18",Before)]
+     Production'System_Tasks 1
+                         empty
+     ProductionPlanning'Init 1
+                         empty
+     ProductionPlanning'Order 1
+                         1`[(Order(1),[Part(1)]),(Order(2),[Part(1),Part(11)]),(Order(3),[Part(3),Part(8)]),(Order(4),[Part(4),Part(5),Part(10)]),(Order(5),[Part(13),Part(14),Part(15)]),(Order(6),[Part(12),Part(13)]),(Order(7),[Part(2),Part(6),Part(9),Part(14),Part(11)]),(Order(8),[Part(1),Part(3),Part(7),Part(15)])]
+     ProductionPlanning'Order_Received 1
+                         empty
+     ProductionPlanning'Orders 1
+                         empty
+     ProductionPlanning'Part 1
+                         1`[(Part(1),[("1",6,4),("2",4,2),("3",3,2)]),(Part(2),[("4",5,2),("5",5,3),("6",5,3)]),(Part(3),[("7",5,2),("8",5,3),("9",5,3)]),(Part(4),[("10",5,2)]),(Part(5),[("11",5,2),("12",5,2),("20",5,3)]),(Part(6),[("13",5,2)]),(Part(7),[("14",5,2),("15",5,3),("16",5,3)]),(Part(8),[("17",5,3),("18",5,3)]),(Part(9),[("19",5,2),("22",5,3)]),(Part(10),[("21",5,3),("23",5,3)]),(Part(11),[("24",5,3)]),(Part(12),[("25",5,2),("26",5,3),("27",5,3),("28",5,3)]),(Part(13),[("29",5,3),("30",5,3),("31",5,3),("32",5,3)]),(Part(14),[("33",6,3),("34",5,3)]),(Part(15),[("35",5,3)])]
+     ProductionSystem'Completed 1
+                         1`[]++
+1`[("1",6,3)]++
+1`[("1",6,3),("2",4,2)]++
+1`[("1",6,4)]++
+1`[("2",4,1),("3",3,2),("1",6,4)]++
+1`[("2",4,2)]++
+1`[("2",4,2),("1",6,3)]++
+1`[("3",3,2),("1",6,3),("2",4,2)]++
+1`[("3",3,2),("1",6,4)]++
+1`[("3",3,2),("2",4,2),("1",6,3)]
+     ProductionSystem'Start 1
+                         empty
+     ProductionSystem'Tasks_Determined 1
+                         empty
+
+  Best Lower Multi-set Bounds
+     Department'Execute 1
+                         empty
+     Department'Execute 2
+                         empty
+     Department'Execute 3
+                         empty
+     Department'Task 1   empty
+     Department'Task 2   empty
+     Department'Task 3   empty
+     Department'Task_Constraints 1
+                         empty
+     Department'Task_Constraints 2
+                         empty
+     Department'Task_Constraints 3
+                         empty
+     Production'Docs 1   1`[("1","5",Before),("14","19",Before),("24","28",Before),("25","30",InProcess),("24","32",Before),("21","23",Before),("26","34",Before)]
+     Production'Documentation_Tasks 1
+                         empty
+     Production'Eng_res_dept1 1
+                         empty
+     Production'Eng_res_dept2 1
+                         1`6
+     Production'Eng_res_dept3 1
+                         1`4
+     Production'Engine 1 1`[("1","4",Before),("7","8",Before),("8","9",InProcess),("20","12",Before),("10","12",Before),("12","14",InProcess),("14","15",Before),("15","16",InProcess),("19","22",Before),("20","11",InProcess),("12","21",InProcess)]
+     Production'Engine_Tasks 1
+                         empty
+     Production'Executing_Tasks 1
+                         empty
+     Production'Init_Constraints 1
+                         empty
+     Production'System 1 1`[("1","3",Before),("2","13",Before),("10","13",Before),("23","10",InProcess),("24","25",Before),("25","26",InProcess),("26","35",Before),("9","18",InProcess),("8","18",Before)]
+     Production'System_Tasks 1
+                         empty
+     ProductionPlanning'Init 1
+                         empty
+     ProductionPlanning'Order 1
+                         1`[(Order(1),[Part(1)]),(Order(2),[Part(1),Part(11)]),(Order(3),[Part(3),Part(8)]),(Order(4),[Part(4),Part(5),Part(10)]),(Order(5),[Part(13),Part(14),Part(15)]),(Order(6),[Part(12),Part(13)]),(Order(7),[Part(2),Part(6),Part(9),Part(14),Part(11)]),(Order(8),[Part(1),Part(3),Part(7),Part(15)])]
+     ProductionPlanning'Order_Received 1
+                         empty
+     ProductionPlanning'Orders 1
+                         empty
+     ProductionPlanning'Part 1
+                         1`[(Part(1),[("1",6,4),("2",4,2),("3",3,2)]),(Part(2),[("4",5,2),("5",5,3),("6",5,3)]),(Part(3),[("7",5,2),("8",5,3),("9",5,3)]),(Part(4),[("10",5,2)]),(Part(5),[("11",5,2),("12",5,2),("20",5,3)]),(Part(6),[("13",5,2)]),(Part(7),[("14",5,2),("15",5,3),("16",5,3)]),(Part(8),[("17",5,3),("18",5,3)]),(Part(9),[("19",5,2),("22",5,3)]),(Part(10),[("21",5,3),("23",5,3)]),(Part(11),[("24",5,3)]),(Part(12),[("25",5,2),("26",5,3),("27",5,3),("28",5,3)]),(Part(13),[("29",5,3),("30",5,3),("31",5,3),("32",5,3)]),(Part(14),[("33",6,3),("34",5,3)]),(Part(15),[("35",5,3)])]
+     ProductionSystem'Completed 1
+                         empty
+     ProductionSystem'Start 1
+                         empty
+     ProductionSystem'Tasks_Determined 1
+                         empty
+
+
+ Home Properties
+------------------------------------------------------------------------
+
+  Home Markings
+     Initial Marking is not a home marking
+
+
+ Liveness Properties
+------------------------------------------------------------------------
+
+  Dead Markings
+     [14,17,18]
+
+  Dead Transition Instances
+     Department'Completed 1
+     Department'Completed 2
+     Department'Determine_Constraints 1
+     Department'Determine_Constraints 2
+     Department'Determine_Constraints 3
+     Department'Start_Task 1
+     Department'Start_Task 2
+     Production'Determine_Dept 1
+     Production'Init_Constraints 1
+     ProductionPlanning'Determine_Parts 1
+     ProductionPlanning'Determine_Tasks 1
+     ProductionPlanning'Init 1
+     ProductionPlanning'Receive_Order 1
+
+  Live Transition Instances
+     None
+
+
+ Fairness Properties
+------------------------------------------------------------------------
+     No infinite occurrence sequences.

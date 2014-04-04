@@ -277,8 +277,8 @@
         <layout>var constraints : Constraints;</layout>
       </var>
       <use id="ID1432191388">
-        <ml>&quot;ProductionFunctions14.6.sml&quot;</ml>
-        <layout>use &quot;ProductionFunctions14.6.sml&quot;;</layout>
+        <ml>&quot;ProductionFunctions14.7.sml&quot;</ml>
+        <layout>use &quot;ProductionFunctions14.7.sml&quot;;</layout>
       </use>
     </globbox>
     <page id="ID1412493538">
@@ -3345,7 +3345,7 @@ List.all (DetermineListofTasks (partlist)) tasklist;</text>
         <textattr colour="Black"
                   bold="false"/>
         <label/>
-        <text>setCurrentOrder order3</text>
+        <text>setCurrentOrder order2</text>
       </Aux>
     </page>
     <page id="ID1433971948">
@@ -7137,6 +7137,42 @@ Constraints</text>
         <label/>
         <text>Mark.ProductionSystem&apos;Completed 1 30715</text>
       </Aux>
+      <Aux id="ID1436208590">
+        <posattr x="-484.000000"
+                 y="164.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>val timer = Timer.startCPUTimer();
+
+use &quot;schedulefunctions.sml&quot;;
+
+val time = Timer.checkCPUTimer timer;</text>
+      </Aux>
+      <Aux id="ID1436208767">
+        <posattr x="-93.000000"
+                 y="181.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>val timer = Timer.startCPUTimer();
+
+val x = 1+1
+
+val time = Timer.checkCPUTimer timer;</text>
+      </Aux>
       <ssarc id="ID1436189669"
              order="1"
              number="2">
@@ -7145,10 +7181,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7157,7 +7193,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>2:1-&gt;3 @ 0 Department&apos;Start_Task 2: {constraints=[(&quot;&quot;,&quot;17&quot;,NoConstraint)],tasks=[],partialtasks=[],task=(&quot;17&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7169,10 +7205,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7181,7 +7217,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>1:1-&gt;2 @ 0 Department&apos;Start_Task 2: {constraints=[(&quot;&quot;,&quot;7&quot;,NoConstraint)],tasks=[],partialtasks=[],task=(&quot;7&quot;,5,2)}</text>
         </descriptor>
       </ssarc>
@@ -7193,10 +7229,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7205,7 +7241,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>4:3-&gt;5 @ 0 Department&apos;Start_Task 2: {constraints=[(&quot;&quot;,&quot;7&quot;,NoConstraint)],tasks=[],partialtasks=[(&quot;17&quot;,5,3)],task=(&quot;7&quot;,5,2)}</text>
         </descriptor>
       </ssarc>
@@ -7217,10 +7253,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7229,7 +7265,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>3:2-&gt;4 @ 0 Department&apos;Start_Task 2: {constraints=[(&quot;&quot;,&quot;17&quot;,NoConstraint)],tasks=[],partialtasks=[(&quot;7&quot;,5,2)],task=(&quot;17&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7241,10 +7277,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7253,7 +7289,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>8:5-&gt;7 @ 5 Department&apos;Completed 2: {partialtasks=[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],tasks=[],task=(&quot;17&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7265,10 +7301,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7277,7 +7313,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>7:5-&gt;6 @ 5 Department&apos;Completed 2: {partialtasks=[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],tasks=[],task=(&quot;7&quot;,5,2)}</text>
         </descriptor>
       </ssarc>
@@ -7289,10 +7325,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7301,7 +7337,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>6:4-&gt;7 @ 5 Department&apos;Completed 2: {partialtasks=[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],tasks=[],task=(&quot;17&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7313,10 +7349,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7325,7 +7361,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>5:4-&gt;6 @ 5 Department&apos;Completed 2: {partialtasks=[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],tasks=[],task=(&quot;7&quot;,5,2)}</text>
         </descriptor>
       </ssarc>
@@ -7337,10 +7373,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7349,7 +7385,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>11:7-&gt;10 @ 5 Department&apos;Completed 2: {partialtasks=[(&quot;7&quot;,5,2)],tasks=[(&quot;17&quot;,5,3)],task=(&quot;7&quot;,5,2)}</text>
         </descriptor>
       </ssarc>
@@ -7361,10 +7397,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7373,7 +7409,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>15:10-&gt;13 @ 5 Department&apos;Start_Task 2: {constraints=[(&quot;7&quot;,&quot;8&quot;,Before),(&quot;&quot;,&quot;8&quot;,NoConstraint)],tasks=[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],partialtasks=[],task=(&quot;8&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7385,10 +7421,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7397,7 +7433,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>10:6-&gt;9 @ 5 Department&apos;Completed 2: {partialtasks=[(&quot;17&quot;,5,3)],tasks=[(&quot;7&quot;,5,2)],task=(&quot;17&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7409,10 +7445,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7421,7 +7457,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>9:6-&gt;8 @ 5 Department&apos;Start_Task 2: {constraints=[(&quot;7&quot;,&quot;8&quot;,Before),(&quot;&quot;,&quot;8&quot;,NoConstraint)],tasks=[(&quot;7&quot;,5,2)],partialtasks=[(&quot;17&quot;,5,3)],task=(&quot;8&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7433,10 +7469,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7445,7 +7481,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>18:13-&gt;15 @ 5 Department&apos;Start_Task 2: {constraints=[(&quot;8&quot;,&quot;9&quot;,InProcess),(&quot;&quot;,&quot;9&quot;,NoConstraint)],tasks=[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],partialtasks=[(&quot;8&quot;,5,3)],task=(&quot;9&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7457,10 +7493,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7469,7 +7505,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>14:9-&gt;12 @ 5 Department&apos;Start_Task 2: {constraints=[(&quot;7&quot;,&quot;8&quot;,Before),(&quot;&quot;,&quot;8&quot;,NoConstraint)],tasks=[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],partialtasks=[],task=(&quot;8&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7481,10 +7517,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7493,7 +7529,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>13:8-&gt;12 @ 5 Department&apos;Completed 2: {partialtasks=[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3)],tasks=[(&quot;7&quot;,5,2)],task=(&quot;17&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7505,10 +7541,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7517,7 +7553,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>12:8-&gt;11 @ 5 Department&apos;Start_Task 2: {constraints=[(&quot;8&quot;,&quot;9&quot;,InProcess),(&quot;&quot;,&quot;9&quot;,NoConstraint)],tasks=[(&quot;7&quot;,5,2)],partialtasks=[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3)],task=(&quot;9&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7529,10 +7565,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7541,7 +7577,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>22:15-&gt;19 @ 10 Department&apos;Completed 2: {partialtasks=[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3)],tasks=[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],task=(&quot;8&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7553,10 +7589,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7565,7 +7601,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>21:15-&gt;18 @ 10 Department&apos;Completed 2: {partialtasks=[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3)],tasks=[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],task=(&quot;9&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7577,10 +7613,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7589,7 +7625,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>17:12-&gt;14 @ 5 Department&apos;Start_Task 2: {constraints=[(&quot;8&quot;,&quot;9&quot;,InProcess),(&quot;&quot;,&quot;9&quot;,NoConstraint)],tasks=[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],partialtasks=[(&quot;8&quot;,5,3)],task=(&quot;9&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7601,10 +7637,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7613,7 +7649,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>16:11-&gt;14 @ 5 Department&apos;Completed 2: {partialtasks=[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3)],tasks=[(&quot;7&quot;,5,2)],task=(&quot;17&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7625,10 +7661,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7637,7 +7673,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>28:19-&gt;25 @ 10 Department&apos;Completed 2: {partialtasks=[(&quot;9&quot;,5,3)],tasks=[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],task=(&quot;9&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7649,10 +7685,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7661,7 +7697,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>27:19-&gt;24 @ 10 Department&apos;Start_Task 3: {constraints=[(&quot;9&quot;,&quot;18&quot;,InProcess),(&quot;8&quot;,&quot;18&quot;,Before),(&quot;&quot;,&quot;18&quot;,NoConstraint)],tasks=[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],partialtasks=[(&quot;9&quot;,5,3)],task=(&quot;18&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7673,10 +7709,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7685,7 +7721,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>20:14-&gt;17 @ 10 Department&apos;Completed 2: {partialtasks=[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3)],tasks=[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],task=(&quot;9&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7697,10 +7733,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7709,7 +7745,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>19:14-&gt;16 @ 10 Department&apos;Completed 2: {partialtasks=[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3)],tasks=[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],task=(&quot;8&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7721,10 +7757,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7733,7 +7769,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>26:18-&gt;23 @ 10 Department&apos;Completed 2: {partialtasks=[(&quot;8&quot;,5,3)],tasks=[(&quot;9&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],task=(&quot;8&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7745,10 +7781,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7757,7 +7793,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>30:24-&gt;27 @ 10 Department&apos;Completed 2: {partialtasks=[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3)],tasks=[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],task=(&quot;9&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7769,10 +7805,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7781,7 +7817,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>32:27-&gt;29 @ 15 Department&apos;Completed 3: {partialtasks=[(&quot;18&quot;,5,3)],tasks=[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)],task=(&quot;18&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7793,10 +7829,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7805,7 +7841,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>25:17-&gt;22 @ 10 Department&apos;Completed 2: {partialtasks=[(&quot;8&quot;,5,3)],tasks=[(&quot;9&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],task=(&quot;8&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7817,10 +7853,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7829,7 +7865,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>24:16-&gt;21 @ 10 Department&apos;Completed 2: {partialtasks=[(&quot;9&quot;,5,3)],tasks=[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],task=(&quot;9&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7841,10 +7877,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7853,7 +7889,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>23:16-&gt;20 @ 10 Department&apos;Start_Task 3: {constraints=[(&quot;9&quot;,&quot;18&quot;,InProcess),(&quot;8&quot;,&quot;18&quot;,Before),(&quot;&quot;,&quot;18&quot;,NoConstraint)],tasks=[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],partialtasks=[(&quot;9&quot;,5,3)],task=(&quot;18&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7865,10 +7901,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7877,7 +7913,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>29:20-&gt;26 @ 10 Department&apos;Completed 2: {partialtasks=[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3)],tasks=[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],task=(&quot;9&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7889,10 +7925,10 @@ Constraints</text>
         <fillattr colour="White"
                   pattern="Solid"
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour=""
                   thick="0"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour=""
                   bold="false"/>
         <arrowattr headsize="1.000000"
                    currentcyckle="2"/>
@@ -7901,7 +7937,7 @@ Constraints</text>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>31:26-&gt;28 @ 15 Department&apos;Completed 3: {partialtasks=[(&quot;18&quot;,5,3)],tasks=[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)],task=(&quot;18&quot;,5,3)}</text>
         </descriptor>
       </ssarc>
@@ -7914,15 +7950,15 @@ Constraints</text>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>1 @ 0:
 Department&apos;Completed_Tasks 3: 1`[]
 Department&apos;Completed_Tasks 2: 1`[]
@@ -7976,8 +8012,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[]
-</text>
+ProductionSystem&apos;Completed 1: 1`[]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -7991,15 +8026,15 @@ ProductionSystem&apos;Completed 1: 1`[]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>3 @ 0:
 Department&apos;Completed_Tasks 3: 1`[]
 Department&apos;Completed_Tasks 2: 1`[]
@@ -8051,8 +8086,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[]
-</text>
+ProductionSystem&apos;Completed 1: 1`[]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8066,15 +8100,15 @@ ProductionSystem&apos;Completed 1: 1`[]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>2 @ 0:
 Department&apos;Completed_Tasks 3: 1`[]
 Department&apos;Completed_Tasks 2: 1`[]
@@ -8126,8 +8160,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[]
-</text>
+ProductionSystem&apos;Completed 1: 1`[]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8141,15 +8174,15 @@ ProductionSystem&apos;Completed 1: 1`[]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>5 @ 0:
 Department&apos;Completed_Tasks 3: 1`[]
 Department&apos;Completed_Tasks 2: 1`[]
@@ -8200,8 +8233,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[]
-</text>
+ProductionSystem&apos;Completed 1: 1`[]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8215,15 +8247,15 @@ ProductionSystem&apos;Completed 1: 1`[]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>4 @ 0:
 Department&apos;Completed_Tasks 3: 1`[]
 Department&apos;Completed_Tasks 2: 1`[]
@@ -8274,8 +8306,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[]
-</text>
+ProductionSystem&apos;Completed 1: 1`[]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8289,15 +8320,15 @@ ProductionSystem&apos;Completed 1: 1`[]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>7 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;17&quot;,5,3)]
@@ -8347,8 +8378,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8362,15 +8392,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3)]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>6 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;7&quot;,5,2)]
@@ -8420,8 +8450,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8435,15 +8464,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2)]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>10 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
@@ -8493,8 +8522,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8508,15 +8536,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>13 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
@@ -8564,8 +8592,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8579,15 +8606,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>9 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
@@ -8637,8 +8664,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8652,15 +8678,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>8 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;7&quot;,5,2)]
@@ -8709,8 +8735,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8724,15 +8749,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2)]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>15 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
@@ -8781,8 +8806,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8796,15 +8820,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>12 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
@@ -8852,8 +8876,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8867,15 +8890,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>11 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;7&quot;,5,2)]
@@ -8925,8 +8948,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -8940,15 +8962,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;7&quot;,5,2)]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>19 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
@@ -8996,8 +9018,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9011,15 +9032,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>18 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;9&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;9&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
@@ -9067,8 +9088,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9082,15 +9102,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;7&quot;,5,2),(&
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>14 @ 5:
 Department&apos;Completed_Tasks 3: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
@@ -9139,8 +9159,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9154,15 +9173,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>25 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
@@ -9210,8 +9229,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9225,15 +9243,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>24 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
@@ -9281,8 +9299,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9296,15 +9313,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>17 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;9&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;9&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
@@ -9352,8 +9369,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9367,15 +9383,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;17&quot;,5,3),(
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>16 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
@@ -9423,8 +9439,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9438,15 +9453,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>23 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;8&quot;,5,3),(&quot;9&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;8&quot;,5,3),(&quot;9&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
@@ -9494,8 +9509,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;9&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;9&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9509,15 +9523,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;9&quot;,5,3),(&
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>27 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
@@ -9565,8 +9579,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9580,15 +9593,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>29 @ 15:
 Department&apos;Completed_Tasks 3: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
@@ -9636,8 +9649,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;7&quot;,5,2),(&quot;17&quot;,5,3)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9651,15 +9663,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>22 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;8&quot;,5,3),(&quot;9&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;8&quot;,5,3),(&quot;9&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
@@ -9707,8 +9719,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;9&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;9&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9722,15 +9733,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;9&quot;,5,3),(&
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>21 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
@@ -9778,8 +9789,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9793,15 +9803,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>20 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
@@ -9849,8 +9859,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9864,15 +9873,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>26 @ 10:
 Department&apos;Completed_Tasks 3: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
@@ -9920,8 +9929,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -9935,15 +9943,15 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
-        <lineattr colour="Black"
+        <lineattr colour="Gray"
                   thick="1"
                   type="Solid"/>
-        <textattr colour="Black"
+        <textattr colour="Gray"
                   bold="false"/>
         <descriptor x="0.000000"
                     y="0.000000"
                     visible="false"
-                    dead="false">
+                    dead="true">
           <text>28 @ 15:
 Department&apos;Completed_Tasks 3: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
 Department&apos;Completed_Tasks 2: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
@@ -9991,8 +9999,7 @@ Production&apos;Docs 1: 1`[(&quot;1&quot;,&quot;5&quot;,Before),(&quot;7&quot;,&
 Production&apos;Init_Constraints 1: empty
 ProductionSystem&apos;Start 1: empty
 ProductionSystem&apos;Tasks_Determined 1: empty
-ProductionSystem&apos;Completed 1: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]
-</text>
+ProductionSystem&apos;Completed 1: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(&quot;8&quot;,5,3),(&quot;17&quot;,5,3),(&quot;7&quot;,5,2)]</text>
         </descriptor>
         <roundbox w="45.000000"
                   h="40.000000"/>
@@ -10299,8 +10306,8 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1436165727"
-                    panx="-27.000000"
-                    pany="-97.000000"
+                    panx="-34.000000"
+                    pany="-15.000000"
                     zoom="1.000000"
                     instance="ID1436165537">
             <zorder>
@@ -10311,8 +10318,8 @@ ProductionSystem&apos;Completed 1: 1`[(&quot;18&quot;,5,3),(&quot;9&quot;,5,3),(
         <zorder>
           <position value="0"/>
           <position value="2"/>
-          <position value="1"/>
           <position value="5"/>
+          <position value="1"/>
           <position value="3"/>
           <position value="4"/>
           <position value="6"/>

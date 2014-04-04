@@ -166,7 +166,7 @@ end;
 fun dumpSchedule sch = 
 let
 val sch=List.rev(sch);
- val outfile = TextIO.openOut("//hallingskeid.uib.no/ube072/Settings/Desktop/GitHub/CPN/Results/TimeSchedules/order4report4.txt");
+ val outfile = TextIO.openOut("//hallingskeid.uib.no/ube072/Settings/Desktop/order1.txt");
  val _ = List.app (fn sch => TextIO.output (outfile,(scheduletoStr sch)^"\n-----\n")) sch
 in
 TextIO.closeOut outfile

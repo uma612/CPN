@@ -1,0 +1,32 @@
+Task [1] starts at 0,
+Task [2] starts at 0,
+Task [1] stops at 1,
+Task [3] starts at 1,
+Task [3] stops at 2,
+Task [2] stops at 4,
+
+-----
+Task [2] starts at 0,
+Task [1] starts at 0,
+Task [2] stops at 2,
+Task [1] stops at 2,
+Task [3] starts at 2,
+Task [3] stops at 3,
+
+-----
+Task [2] starts at 0,
+Task [1] starts at 0,
+Task [1] stops at 2,
+Task [2] stops at 2,
+Task [3] starts at 2,
+Task [3] stops at 3,
+
+-----
+Task [2] starts at 0,
+Task [1] starts at 0,
+Task [1] stops at 2,
+Task [3] starts at 2,
+Task [2] stops at 2,
+Task [3] stops at 3,
+
+-----

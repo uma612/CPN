@@ -144,7 +144,7 @@ end;
 
 val paths=validpaths(1);
 
-val sch = !allschedules;
+(* val sch = !allschedules; *)
 val allschedules = List.length(!allschedules);	
 (*			
 !sleepstate;
@@ -156,7 +156,7 @@ val allschedules = List.length(!allschedules);
 
 (* Result output file *)
 
-fun scheduletoStr sch = 
+(* fun scheduletoStr sch = 
 let 
 val sch=List.rev(sch)
 in
@@ -166,14 +166,53 @@ end;
 fun dumpSchedule sch = 
 let
 val sch=List.rev(sch);
- val outfile = TextIO.openOut("//hallingskeid.uib.no/ube072/Settings/Desktop/GitHub/CPN/Results/TimeSchedules/testorder.txt");
+ val outfile = TextIO.openOut("//hallingskeid.uib.no/ube072/Settings/Desktop/GitHub/CPN/Testresults/TimeSchedules/order7constraint4.txt");
  val _ = List.app (fn sch => TextIO.output (outfile,(scheduletoStr sch)^"\n-----\n")) sch
 in
 TextIO.closeOut outfile
 end;
 
-dumpSchedule (sch);
+dumpSchedule (sch); *)
 
+(* val j=ref (CPN'Time.fromInt 0);
+val bestpath: (time * (string * TaskName)) list ref =ref[];
+fun getBestSchedule([])= (!j,!bestpath)
+| getBestSchedule(paths)=
+let 
+val _ = print "here\n"
+val (x,_)=(hd(hd(paths)));
+val path=hd(paths);
+
+val _ = print "and there\n"
+in
+
+if (!j=0)  orelse (CPN'Time.cmp(x,!j) = LESS) then
+      (j:=x;
+bestpath:=path;
+getBestSchedule(tl(paths)))
+   else 
+(bestpath;
+     getBestSchedule(tl(paths)))
+end;
+
+val besttime=getBestSchedule(sch);
+fun besttimescheduletoStr sch = 
+let 
+val sch=List.rev(sch)
+in
+List.map (fn (t,(str:string,tname:TaskName))=> "Task ["^tname^"] "^str^" at "^(ModelTime.toString (t))^",\n")sch
+end;
+
+fun dumpbestschedule (besttime)=
+let
+val (_,x)=(besttime);
+val outfile = TextIO.openOut("//hallingskeid.uib.no/ube072/Settings/Desktop/GitHub/CPN/Testresults/TimeSchedules/order1bestschedule.txt");
+val _ = List.app (fn sch => TextIO.output (outfile,(besttimescheduletoStr x)^"\n-----\n")) sch
+in
+TextIO.closeOut outfile
+end; *)
+
+ 
 
 
 
