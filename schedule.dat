@@ -1,6 +1,6 @@
-# Year Red Green Blue
-A 0 5  
-B 0 5 
-C 5 15
-D 10 15
-E 10 20
+# Task Start-time End-time
+1 0 5  
+2 0 4
+3 5 10
+24 0 5
+

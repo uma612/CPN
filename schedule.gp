@@ -144,5 +144,7 @@ set fontpath
 set fit noerrorvariables
 GNUTERM = "wxt"
 datafile = "O:/Settings/Desktop/schedule.gp"
-plot "O:/Settings/Desktop/schedule.dat" u($3-$2):xtic(1) t "Time taken"
+#plot "O:/Settings/Desktop/schedule.dat" u($3-$2):xtic(1) t "Time taken"
+plot "C:/Users/DELL/Documents/GitHub/CPN/schedule.gp" u 2 t "Start time", " " u 3 t " End Time"
+
 #    EOF
